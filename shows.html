@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>TornBC TV – Shows</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <header class="top-bar">
+    <div class="top-bar-inner">
+      <div class="logo-mark"><span>TB</span></div>
+      <div class="site-title-block">
+        <h1>TornBC TV</h1>
+        <span>Independent Broadcasting from Torn City • Hosted by LoneBlackBear</span>
+      </div>
+    </div>
+  </header>
+
+  <nav class="nav">
+    <div class="nav-inner">
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="shows.html" class="nav-active">Shows</a>
+        <a href="thunder-maker.html">The Thunder Maker</a>
+        <a href="recruitment.html">Join the Network</a>
+        <a href="media-kit.html">Media Kit</a>
+      </div>
+      <div class="nav-tagline">News • DIY • Markets • Gossip • Music • Originals</div>
+    </div>
+  </nav>
+
+  <main class="wrapper">
+
+    <section class="page-header">
+      <h1>Shows on TornBC TV</h1>
+      <p>Our current programming lineup. All episodes stream via YouTube and are embedded here as they release.</p>
+    </section>
+
+    <section class="section">
+      <div class="card-grid">
+        <article class="card">
+          <div class="card-label">Flagship</div>
+          <h3 class="card-title">TornBC Newsdesk</h3>
+          <p class="card-body">
+            The core news program covering wars, politics, market shifts, and culture in Torn.
+          </p>
+          <div class="card-meta">
+            <span>Host: LoneBlackBear</span>
+            <span>Category: News / Opinion</span>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-label">DIY</div>
+          <h3 class="card-title">DIY &amp; Repairs</h3>
+          <p class="card-body">
+            Small-shop repairs, electronics, metal detector builds, scooter mods and more – shot from the workbench.
+          </p>
+          <div class="card-meta">
+            <span>Host: LoneBlackBear</span>
+            <span>Category: Tutorials</span>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-label">Economy</div>
+          <h3 class="card-title">Money &amp; Markets</h3>
+          <p class="card-body">
+            Focused on Torn’s economy: stocks, items, housing, travel arbitrage, long-term wealth plays.
+          </p>
+          <div class="card-meta">
+            <span>Format: Analysis</span>
+            <span>Runtime: 10–30 mins</span>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-label">Talk</div>
+          <h3 class="card-title">Talk &amp; Tea</h3>
+          <p class="card-body">
+            Interviews, gossip, and faction couch chats. Relaxed vibe, serious or silly depending on the guests.
+          </p>
+          <div class="card-meta">
+            <span>Format: Talk show</span>
+            <span>Guests: Torn players &amp; factions</span>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-label">Music</div>
+          <h3 class="card-title">Music Live</h3>
+          <p class="card-body">
+            Player-submitted tracks, playlists, and visualizers. Background music for grinding, flying, or war.
+          </p>
+          <div class="card-meta">
+            <span>Format: Music block</span>
+            <span>Open to submissions</span>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-label">Original Series</div>
+          <h3 class="card-title">The Thunder Maker</h3>
+          <p class="card-body">
+            A cinematic mini-series blending Native culture, storms, and the unseen forces shaping the world.
+          </p>
+          <div class="card-meta">
+            <span><a href="thunder-maker.html">Series page →</a></span>
+            <span>Season 1: 4 episodes</span>
+          </div>
+        </article>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <span>© <span id="year"></span> TornBC TV. An independent fan project for Torn City.</span>
+      <span>Primary contact: LoneBlackBear in-game • Torn forums / mail</span>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
