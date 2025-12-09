@@ -26,7 +26,14 @@
         <a href="recruitment.html">Join the Network</a>
         <a href="media-kit.html">Media Kit</a>
       </div>
-      <div class="nav-tagline">News • DIY • Markets • Gossip • Music • Originals</div>
+      <div class="nav-tagline">
+        <a href="#vids-news">News</a> •
+        <a href="#vids-diy">DIY</a> •
+        <a href="#vids-money">Markets</a> •
+        <a href="#vids-events">Gossip / Events</a> •
+        <a href="#vids-sports">Sports</a> •
+        <a href="#vids-music">Music</a>
+      </div>
     </div>
   </nav>
 
@@ -42,11 +49,8 @@
           </p>
 
           <div class="hero-cta-row">
-            <a href="https://www.youtube.com/@YOURCHANNEL" class="btn-primary" target="_blank" rel="noopener">
+            <a href="https://www.youtube.com/playlist?list=PL_ZeMqAX1P35-Wio5Au7qFgWBsER3VgZC" class="btn-primary" target="_blank" rel="noopener">
               ▶ Watch on YouTube
-            </a>
-            <a href="https://www.youtube.com/playlist?list=PL_ZeMqAX1P36hy_-GWqM7o87zJUG--9aF" class="btn-secondary" target="_blank" rel="noopener">
-              ♫ Music &amp; Soundtrack
             </a>
             <a href="recruitment.html" class="btn-secondary">
               ✉ Become a Content Creator
@@ -57,6 +61,23 @@
             <span class="hero-pill">Streaming via YouTube • Embedded here</span>
             <span class="hero-pill">New: <strong>The Thunder Maker</strong> mini-series</span>
           </div>
+
+          <section class="hero-broadcast" id="vids-latest">
+            <h3>Broadcast of the Day</h3>
+            <p class="hero-sub" style="max-width: 36rem;">
+              The latest featured segment from the TornBC TV newsroom. Swap this clip daily to spotlight your newest upload.
+            </p>
+            <div class="tv-frame">
+              <!-- Replace VIDEO_ID_LATEST with the YouTube ID of your newest short -->
+              <iframe
+                src="https://www.youtube.com/embed/F3mqsTlhH9w"
+                title="Broadcast of the Day"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen>
+              </iframe>
+            </div>
+          </section>
         </div>
 
         <aside class="hero-side">
@@ -105,60 +126,8 @@
               </iframe>
             </div>
           </div>
-
-          <div class="panel">
-            <h3>Music &amp; Soundtrack</h3>
-            <p style="font-size:0.8rem; color:var(--text-muted); margin-bottom:0.5rem;">
-              Curated tracks and themes for editing, background listening, and TornBC TV vibes.
-            </p>
-            <div class="tv-frame">
-              <iframe
-                src="https://www.youtube.com/embed/videoseries?list=PL_ZeMqAX1P36hy_-GWqM7o87zJUG--9aF"
-                title="TornBC TV Music &amp; Soundtrack Playlist"
-                frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                allowfullscreen>
-              </iframe>
-            </div>
-          </div>
-
         </aside>
-      
-        <article class="card">
-          <div class="card-label">Rumors & Gossip</div>
-          <h3 class="card-title">Elimination Rumor Report</h3>
-          <p class="card-body">
-            LoneBlackBear covers breaking whispers about leadership races, alliances, and the uncertain future of Torn politics.
-          </p>
-          <div class="tv-frame">
-            <iframe
-              src="https://www.youtube.com/embed/sTHgTN8EjnY"
-              title="Rumor & Gossip Segment"
-              frameborder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              allowfullscreen>
-            </iframe>
-          </div>
-        </article>
-
-        <article class="card">
-          <div class="card-label">Sports</div>
-          <h3 class="card-title">Trackside Interview & Crash</h3>
-          <p class="card-body">
-            LoneBlackBear interviews the race organizer moments before a dramatic on-track collision shakes up the event.
-          </p>
-          <div class="tv-frame">
-            <iframe
-              src="https://www.youtube.com/embed/XxR4YNkdduU"
-              title="Sports Interview with Crash"
-              frameborder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              allowfullscreen>
-            </iframe>
-          </div>
-        </article>
-
-    </div>
+      </div>
     </section>
 
     <section class="section">
@@ -231,8 +200,18 @@
         <p>Watch the latest shorts from the TornBC TV newsroom: intros, DIY tools, and the money market report.</p>
       </div>
 
+      <div class="tab-row" id="vids-tabs">
+        <span>Jump to: </span>
+        <a href="#vids-news">News</a> •
+        <a href="#vids-diy">DIY</a> •
+        <a href="#vids-money">Markets</a> •
+        <a href="#vids-events">Events</a> •
+        <a href="#vids-sports">Sports</a> •
+        <a href="#vids-latest">Broadcast of the Day</a>
+      </div>
+
       <div class="card-grid">
-        <article class="card">
+        <article class="card" id="vids-news">
           <div class="card-label">News Intro</div>
           <h3 class="card-title">Daily News Segment Intro</h3>
           <p class="card-body">
@@ -249,7 +228,7 @@
           </div>
         </article>
 
-        <article class="card">
+        <article class="card" id="vids-diy">
           <div class="card-label">DIY &amp; Tools</div>
           <h3 class="card-title">Walks All Over the Sky Tool</h3>
           <p class="card-body">
@@ -282,39 +261,7 @@
             </iframe>
           </div>
         </article>
-      
-        <article class="card">
-          <div class="card-label">Events: Elimination</div>
-          <h3 class="card-title">Elimination Event Coverage</h3>
-          <p class="card-body">
-            LoneBlackBear reports from the front lines of the Elimination event with tips and highlights.
-          </p>
-          <div class="tv-frame">
-            <iframe
-              src="https://www.youtube.com/embed/F3mqsTlhH9w"
-              title="Elimination Event Segment"
-              frameborder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              allowfullscreen>
-            </iframe>
-          </div>
-        </article>
-        <article class="card">
-          <div class="card-label">Money &amp; Markets</div>
-          <h3 class="card-title">Market Movers &amp; Stock Tips</h3>
-          <p class="card-body">
-            A fast-paced rundown of rising and falling Torn stocks, top risers, fallers, and smart positioning.
-          </p>
-          <div class="tv-frame">
-            <iframe
-              src="https://www.youtube.com/embed/NT09yiyC6q8"
-              title="Torn Stock Market Update"
-              frameborder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              allowfullscreen>
-            </iframe>
-          </div>
-        </article></div>
+      </div>
     </section>
 
 
