@@ -5,6 +5,44 @@
   <title>TornBC TV – Home</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link rel="stylesheet" href="css/styles.css" />
+<style>
+/* ===== Layout refresh (Dec 2025) ===== */
+.nav-tagline{display:none;}
+
+.hero-grid-single{
+  grid-template-columns: 1fr;
+}
+.hero-main{display:none;}
+
+.section{padding-top: 26px;}
+
+.card-grid{
+  display:grid;
+  gap: 18px;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  align-items:start;
+}
+
+@media (min-width: 980px){
+  /* Give the page a more "media site" rhythm with varied card spans */
+  .auto-grid .card:nth-child(1),
+  .today-grid .card:nth-child(1){
+    grid-column: span 2;
+  }
+  .today-grid .card:nth-child(4){
+    grid-column: span 2;
+  }
+  .shorts-grid .card:nth-child(1){
+    grid-column: span 2;
+  }
+}
+
+.tv-frame{border-radius: 16px; overflow:hidden;}
+.tv-frame iframe{width:100%; aspect-ratio:16/9; height:auto;}
+
+.panel{height:100%;}
+/* ===================================== */
+</style>
 </head>
 <body>
   <header class="top-bar">
@@ -26,17 +64,14 @@
         <a href="recruitment.html">Join the Network</a>
         <a href="media-kit.html">Media Kit</a>
       </div>
-      <div class="nav-tagline">News • DIY • Markets • Gossip • Music • Originals</div>
-    </div>
+</div>
   </nav>
 
   <main class="wrapper">
 
     <section class="hero">
-      <div class="hero-grid">
-        <div class="hero-main">
-          <div class="hero-kicker">Start of Broadcast Day</div>
-          <h2>Welcome to TornBC TV</h2>
+      <div class="hero-grid hero-grid-single">
+<h2>Welcome to TornBC TV</h2>
           <p class="hero-sub">
             Independent news, DIY, money markets, gossip, music, and original series from the streets of Torn – anchored by LoneBlackBear.
           </p>
@@ -182,74 +217,13 @@
     <section class="section">
       <div class="section-header">
         <div>
-          <div class="section-title">Programming slate</div>
-          <h2>Featured Shows</h2>
-        </div>
-        <p>Deep dives, light gossip, serious markets, and original storytelling – all in one channel.</p>
-      </div>
-
-      <div class="card-grid">
-        <article class="card">
-          <div class="card-label">Flagship News</div>
-          <h3 class="card-title"><a href="shows.html#newsdesk">TornBC Newsdesk</a></h3>
-          <p class="card-body">
-            Daily updates on wars, politics, markets, and life in Torn – hosted by LoneBlackBear at the anchor desk.
-          </p>
-          <div class="card-meta">
-            <span>Format: News / Analysis</span>
-            <span>New episodes: 3x per week</span>
-          </div>
-        </article>
-
-        <article class="card">
-          <div class="card-label">DIY &amp; Life</div>
-          <h3 class="card-title"><a href="shows.html#diy">DIY &amp; Repairs</a></h3>
-          <p class="card-body">
-            Tools, builds, scooter fixes, electronics hacks, and real-world projects you can actually copy.
-          </p>
-          <div class="card-meta">
-            <span>Format: Tutorial</span>
-            <span>Runtime: 10–20 mins</span>
-          </div>
-        </article>
-
-        <article class="card">
-          <div class="card-label">Economy</div>
-          <h3 class="card-title"><a href="shows.html#money">Money &amp; Markets</a></h3>
-          <p class="card-body">
-            Torn stock market coverage, item trends, and side-gig strategies – from hospital flips to casino grinds.
-          </p>
-          <div class="card-meta">
-            <span>Format: Analysis</span>
-            <span>Includes: Charts &amp; overlays</span>
-          </div>
-        </article>
-
-        <article class="card">
-          <div class="card-label">Original Series</div>
-          <h3 class="card-title"><a href="thunder-maker.html">The Thunder Maker</a></h3>
-          <p class="card-body">
-            A four-part mini-series blending Native storytelling, storms, and the power behind the clouds.
-          </p>
-          <div class="card-meta">
-            <span>Season 1: 4 episodes</span>
-            <span><a href="thunder-maker.html">Series page →</a></span>
-          </div>
-        </article>
-      </div>
-    </section>
-
-  
-    <section class="section">
-      <div class="section-header">
-        <div>
           <div class="section-title">Latest Daily Segments</div>
           <h2>Today on TornBC TV</h2>
         </div>
         <p>Watch the latest shorts from the TornBC TV newsroom: intros, DIY tools, and the money market report.</p>
       </div>
 
-      <div class="card-grid">
+      <div class="card-grid auto-grid">
         <article class="card">
           <div class="card-label">News Intro</div>
           <h3 class="card-title">Daily News Segment Intro</h3>
@@ -331,7 +305,8 @@
         <p>All the latest TornBC TV shorts collected on one page for easy viewing.</p>
       </div>
 
-      <div class="card-grid">
+
+      <div class="card-grid today-grid">
         <article class="card">
           <div class="card-label">Channel Promo</div>
           <h3 class="card-title">TornBC TV Channel Bumper</h3>
@@ -429,7 +404,8 @@
         <p>Spotlight shorts introducing the people behind TornBC TV – creators, artists, and on-air talent.</p>
       </div>
 
-      <div class="card-grid">
+
+      <div class="card-grid shorts-grid">
 
         <!-- AkariWata Intro -->
         <article class="card">
