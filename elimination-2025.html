@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>TornBC TV – Elimination 2025</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="css/styles.css" />
+  <style>
+    /* Elimination Documentary page layout */
+    .doc-hero {
+      padding: 18px 0 8px;
+    }
+    .doc-hero h2 { margin: 0 0 8px; }
+    .doc-sub {
+      color: var(--text-muted);
+      max-width: 70ch;
+      margin: 0 0 14px;
+    }
+    .doc-meta {
+      display:flex;
+      flex-wrap:wrap;
+      gap: 10px;
+      margin: 0 0 18px;
+    }
+    .doc-pill {
+      font-size: 0.85rem;
+      padding: 6px 10px;
+      border-radius: 999px;
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.08);
+    }
+    .doc-grid {
+      display:grid;
+      gap: 18px;
+      grid-template-columns: 1fr;
+      align-items:start;
+    }
+    @media (min-width: 980px){
+      .doc-grid { grid-template-columns: 1.7fr 0.9fr; }
+      .sticky-side { position: sticky; top: 16px; }
+    }
+    .tv-frame{border-radius: 16px; overflow:hidden;}
+    .tv-frame iframe{width:100%; aspect-ratio:16/9; height:auto;}
+    .chapter-notes{
+      margin-top: 10px;
+      padding: 12px 12px;
+      border-radius: 12px;
+      background: rgba(0,0,0,0.20);
+      border: 1px dashed rgba(255,255,255,0.14);
+      color: var(--text-muted);
+      line-height: 1.35;
+    }
+    .chapter-notes:focus{
+      outline: 2px solid rgba(255,255,255,0.18);
+      color: var(--text);
+      border-style: solid;
+    }
+    .jump-list {
+      display:flex;
+      flex-wrap:wrap;
+      gap: 10px;
+      margin-top: 10px;
+    }
+    .jump-link {
+      display:inline-block;
+      padding: 8px 10px;
+      border-radius: 12px;
+      text-decoration:none;
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.08);
+      color: var(--text);
+      font-size: 0.9rem;
+    }
+    .jump-link:hover { filter: brightness(1.1); }
+  </style>
+</head>
+<body>
+  <header class="top-bar">
+    <div class="top-bar-inner">
+      <div class="logo-mark"><span>TB</span></div>
+      <div class="site-title-block">
+        <h1>TornBC TV</h1>
+        <span>Independent Broadcasting from Torn City • Hosted by LoneBlackBear</span>
+      </div>
+    </div>
+  </header>
+
+  <nav class="nav">
+    <div class="nav-inner">
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="shows.html">Shows</a>
+        <a href="thunder-maker.html">The Thunder Maker</a>
+        <a href="elimination-2025.html" class="nav-active">Elimination 2025</a>
+        <a href="recruitment.html">Join the Network</a>
+        <a href="media-kit.html">Media Kit</a>
+      </div>
+    </div>
+  </nav>
+
+  <main class="wrapper">
+    <section class="section doc-hero">
+      <div class="section-header">
+        <div>
+          <div class="section-title">Documentary</div>
+          <h2>Elimination Event — 2025</h2>
+        </div>
+        <p class="doc-sub">
+          From hearing about Elimination by accident just days before… to finishing <strong>6th place</strong> out of the 12 teams that started.
+          This is the story of our run — one chapter at a time.
+        </p>
+        <div class="doc-meta">
+          <span class="doc-pill"><strong>Team:</strong> The PunchBags</span>
+          <span class="doc-pill"><strong>Placement:</strong> 6th / 12</span>
+          <span class="doc-pill"><strong>Year:</strong> 2025</span>
+          <span class="doc-pill"><strong>Host:</strong> LoneBlackBear</span>
+        </div>
+      </div>
+
+      <div class="doc-grid">
+        <div>
+          <div class="card-grid" style="grid-template-columns: 1fr; gap: 18px;">
+            
+        <article class="card" id="chapter-1">
+          <div class="card-label">Chapter 1</div>
+          <h3 class="card-title">Chapter 1 — The Discovery</h3>
+          <div class="tv-frame">
+            <iframe
+              src="https://www.youtube.com/embed/fVLtrCr6YII"
+              title="Elimination Chapter 1"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen>
+            </iframe>
+          </div>
+          <div class="chapter-notes" contenteditable="true" data-note-id="ch1"><em>Click here and write your chapter commentary…</em></div>
+          <p class="chapter-notes" contenteditable="true" spellcheck="true">
+            Click here to add your chapter commentary (what happened, how it felt, who showed up, what changed).
+          </p>
+        </article>
+
+        <article class="card" id="chapter-2">
+          <div class="card-label">Chapter 2</div>
+          <h3 class="card-title">Chapter 2 — The First Steps</h3>
+          <div class="tv-frame">
+            <iframe
+              src="https://www.youtube.com/embed/KHORgxfB74k"
+              title="Elimination Chapter 2"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen>
+            </iframe>
+          </div>
+          <div class="chapter-notes" contenteditable="true" data-note-id="ch2"><em>Click here and write your chapter commentary…</em></div>
+          <p class="chapter-notes" contenteditable="true" spellcheck="true">
+            Click here to add your chapter commentary (what happened, how it felt, who showed up, what changed).
+          </p>
+        </article>
+
+        <article class="card" id="chapter-3">
+          <div class="card-label">Chapter 3</div>
+          <h3 class="card-title">Chapter 3 — Pressure Builds</h3>
+          <div class="tv-frame">
+            <iframe
+              src="https://www.youtube.com/embed/wr83zlSWl2g"
+              title="Elimination Chapter 3"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen>
+            </iframe>
+          </div>
+          <div class="chapter-notes" contenteditable="true" data-note-id="ch3"><em>Click here and write your chapter commentary…</em></div>
+          <p class="chapter-notes" contenteditable="true" spellcheck="true">
+            Click here to add your chapter commentary (what happened, how it felt, who showed up, what changed).
+          </p>
+        </article>
+
+        <article class="card" id="chapter-4">
+          <div class="card-label">Chapter 4</div>
+          <h3 class="card-title">Chapter 4 — The Grind</h3>
+          <div class="tv-frame">
+            <iframe
+              src="https://www.youtube.com/embed/ws3AXTV8sBw"
+              title="Elimination Chapter 4"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen>
+            </iframe>
+          </div>
+          <div class="chapter-notes" contenteditable="true" data-note-id="ch4"><em>Click here and write your chapter commentary…</em></div>
+          <p class="chapter-notes" contenteditable="true" spellcheck="true">
+            Click here to add your chapter commentary (what happened, how it felt, who showed up, what changed).
+          </p>
+        </article>
+
+        <article class="card" id="chapter-5">
+          <div class="card-label">Chapter 5</div>
+          <h3 class="card-title">Chapter 5 — Turning Point</h3>
+          <div class="tv-frame">
+            <iframe
+              src="https://www.youtube.com/embed/dG7VeVN81Eg"
+              title="Elimination Chapter 5"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen>
+            </iframe>
+          </div>
+          <div class="chapter-notes" contenteditable="true" data-note-id="ch5"><em>Click here and write your chapter commentary…</em></div>
+          <p class="chapter-notes" contenteditable="true" spellcheck="true">
+            Click here to add your chapter commentary (what happened, how it felt, who showed up, what changed).
+          </p>
+        </article>
+
+        <article class="card" id="chapter-6">
+          <div class="card-label">Chapter 6</div>
+          <h3 class="card-title">Chapter 6 — Final Push</h3>
+          <div class="tv-frame">
+            <iframe
+              src="https://www.youtube.com/embed/LJOu5F9xfmI"
+              title="Elimination Chapter 6"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen>
+            </iframe>
+          </div>
+          <div class="chapter-notes" contenteditable="true" data-note-id="ch6"><em>Click here and write your chapter commentary…</em></div>
+          <p class="chapter-notes" contenteditable="true" spellcheck="true">
+            Click here to add your chapter commentary (what happened, how it felt, who showed up, what changed).
+          </p>
+        </article>
+
+        <article class="card" id="chapter-7">
+          <div class="card-label">Chapter 7</div>
+          <h3 class="card-title">Chapter 7 — 6th Place, Together</h3>
+          <div class="tv-frame">
+            <iframe
+              src="https://www.youtube.com/embed/1-iCSpgxRLQ"
+              title="Elimination Chapter 7"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen>
+            </iframe>
+          </div>
+          <div class="chapter-notes" contenteditable="true" data-note-id="ch7"><em>Click here and write your chapter commentary…</em></div>
+          <p class="chapter-notes" contenteditable="true" spellcheck="true">
+            Click here to add your chapter commentary (what happened, how it felt, who showed up, what changed).
+          </p>
+        </article>
+          </div>
+        </div>
+
+        <aside class="panel sticky-side">
+          <h3>Jump to Chapter</h3>
+          <p style="font-size:0.85rem; color:var(--text-muted); margin-bottom:0.75rem;">
+            Quick links for navigation while you watch.
+          </p>
+          <div class="jump-list">
+            <a class="jump-link" href="#chapter-1">Chapter 1</a>
+<a class="jump-link" href="#chapter-2">Chapter 2</a>
+<a class="jump-link" href="#chapter-3">Chapter 3</a>
+<a class="jump-link" href="#chapter-4">Chapter 4</a>
+<a class="jump-link" href="#chapter-5">Chapter 5</a>
+<a class="jump-link" href="#chapter-6">Chapter 6</a>
+<a class="jump-link" href="#chapter-7">Chapter 7</a>
+          </div>
+
+          <div style="height:14px;"></div>
+
+          <h3>Notes</h3>
+          <p style="font-size:0.85rem; color:var(--text-muted);">
+            Tip: You can click into each chapter notes box and type your commentary right on the page.
+            When you’re ready to publish, copy the final text back into the HTML file.
+          </p>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <span>© <span id="year"></span> TornBC TV. An independent fan project for Torn City.</span>
+      <span>Primary contact: LoneBlackBear in-game • Torn forums / mail</span>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+
+<script>
+/* TornBC TV Elimination notes: in-browser editing + auto-save (localStorage) */
+(function(){
+  const KEY = "tornbc_elim_notes_v1";
+  const data = JSON.parse(localStorage.getItem(KEY) || "{}");
+
+  function save(){
+    const out = {};
+    document.querySelectorAll("[data-note-id]").forEach(el=>{
+      out[el.getAttribute("data-note-id")] = el.innerHTML;
+    });
+    localStorage.setItem(KEY, JSON.stringify(out));
+  }
+
+  document.querySelectorAll("[data-note-id]").forEach(el=>{
+    const id = el.getAttribute("data-note-id");
+    if (data[id]) el.innerHTML = data[id];
+    el.addEventListener("input", ()=>{
+      // lightweight debounce
+      window.clearTimeout(el._tornbcT);
+      el._tornbcT = window.setTimeout(save, 250);
+    });
+  });
+
+  // Expose a manual save + reset
+  window.TornBCElimNotes = {
+    save,
+    reset: function(){
+      if(confirm("Clear ALL saved Elimination notes on this device/browser?")){
+        localStorage.removeItem(KEY);
+        location.reload();
+      }
+    }
+  };
+})();
+</script>
+
+</body>
+</html>
