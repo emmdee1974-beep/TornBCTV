@@ -1,501 +1,468 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <title>TornBC TV – Home</title>
+  <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>TornBC TV • News, Weather, Markets & Originals</title>
+  <meta name="description" content="TornBC TV — Independent broadcasting from Torn City. News, weather, markets, DIY, gossip, and original series hosted by LoneBlackBear." />
+  <link rel="preconnect" href="https://www.youtube.com" />
+  <link rel="preconnect" href="https://i.ytimg.com" />
   <link rel="stylesheet" href="css/styles.css" />
 </head>
+
 <body>
-  <header class="top-bar">
-    <div class="top-bar-inner">
-      <div class="logo-mark"><span>TB</span></div>
-      <div class="site-title-block">
-        <h1>TornBC TV</h1>
-        <span>Independent Broadcasting from Torn City • Hosted by LoneBlackBear</span>
+  <!-- Utility bar -->
+  <header class="utility">
+    <div class="container utility__inner">
+      <div class="utility__left">
+        <span class="pill">TBCTV</span>
+        <span class="muted">Independent Broadcasting from Torn City</span>
+      </div>
+      <div class="utility__right">
+        <span id="tcClock" class="utility__clock" title="Torn City Time (approx)"></span>
+        <a class="utility__link" href="https://www.youtube.com/playlist?list=PL_ZeMqAX1P35-Wio5Au7qFgWBsER3VgZC" target="_blank" rel="noopener">Watch playlist</a>
+        <a class="utility__link" href="recruitment.html">Join the Network</a>
       </div>
     </div>
   </header>
 
-  <nav class="nav">
-    <div class="nav-inner">
-      <div class="nav-links">
-        <a href="index.html" class="nav-active">Home</a>
-        <a href="shows.html">Shows</a>
-        <a href="thunder-maker.html">The Thunder Maker</a>
-        <a href="elimination-2025.html">Elimination 2025</a>
-        <a href="recruitment.html">Join the Network</a>
-        <a href="media-kit.html">Media Kit</a>
+  <!-- Main masthead -->
+  <div class="mast">
+    <div class="container mast__inner">
+      <a class="brand" href="index.html" aria-label="TornBC TV Home">
+        <div class="brand__mark">TB</div>
+        <div class="brand__text">
+          <div class="brand__name">TornBC TV</div>
+          <div class="brand__tag">News • Weather • Markets • DIY • Originals</div>
+        </div>
+      </a>
+
+      <form class="search" onsubmit="return false;" role="search" aria-label="Search TornBC TV">
+        <input id="siteSearch" type="search" placeholder="Search videos & stories…" autocomplete="off" />
+        <button type="button" id="clearSearch" class="search__btn" aria-label="Clear search">✕</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Section nav -->
+  <nav class="nav" aria-label="Primary">
+    <div class="container nav__inner">
+      <button class="nav__menu" id="menuBtn" aria-controls="navDrawer" aria-expanded="false">☰ Sections</button>
+      <div class="nav__links" id="navLinks">
+        <a href="#top" class="is-active">Top Stories</a>
+        <a href="#latest">Latest Videos</a>
+        <a href="#shows">Shows</a>
+        <a href="#tools">Interactive Tools</a>
+        <a href="#times">Torn City Times</a>
+        <a href="#weather">Weather Desk</a>
+        <a href="#markets">Markets</a>
+        <a href="#community">Community</a>
+        <a href="#about">About</a>
       </div>
-      <div class="nav-tagline">News • DIY • Markets • Gossip • Music • Originals</div>
+
+      <div class="nav__right">
+        <a class="btn btn--ghost" href="music.html">♫ Music</a>
+        <a class="btn btn--ghost" href="media-kit.html">Media Kit</a>
+        <a class="btn btn--primary" href="https://www.youtube.com/playlist?list=PL_ZeMqAX1P35-Wio5Au7qFgWBsER3VgZC" target="_blank" rel="noopener">▶ Watch</a>
+      </div>
     </div>
   </nav>
 
-  <main class="wrapper">
+  <!-- Drawer (mobile) -->
+  <aside class="drawer" id="navDrawer" aria-hidden="true">
+    <div class="drawer__head">
+      <strong>Sections</strong>
+      <button class="drawer__close" id="closeDrawer" aria-label="Close">✕</button>
+    </div>
+    <div class="drawer__links">
+      <a href="#top">Top Stories</a>
+      <a href="#latest">Latest Videos</a>
+      <a href="#shows">Shows</a>
+      <a href="#tools">Interactive Tools</a>
+      <a href="#times">Torn City Times</a>
+      <a href="#weather">Weather Desk</a>
+      <a href="#markets">Markets</a>
+      <a href="#community">Community</a>
+      <a href="#about">About</a>
+    </div>
+    <div class="drawer__foot">
+      <a class="btn btn--primary btn--full" href="https://www.youtube.com/playlist?list=PL_ZeMqAX1P35-Wio5Au7qFgWBsER3VgZC" target="_blank" rel="noopener">▶ Open Playlist</a>
+      <a class="btn btn--ghost btn--full" href="recruitment.html">✉ Become a Creator</a>
+    </div>
+  </aside>
 
+  <main id="top" class="container main">
+
+    <!-- Breaking / promo bar -->
+    <section class="breaking" role="region" aria-label="Breaking">
+      <div class="breaking__label">LIVE FEED</div>
+      <div class="breaking__text" id="breakingText">New uploads land in “Latest Videos” — tap any card to play.</div>
+      <a class="breaking__cta" href="#latest">Go to latest</a>
+    </section>
+
+    <!-- Hero grid -->
     <section class="hero">
-      <div class="hero-grid">
-        <div class="hero-main">
-          <div class="hero-kicker">Start of Broadcast Day</div>
-          <h2>Welcome to TornBC TV</h2>
-          <p class="hero-sub">
-            Independent news, DIY, money markets, gossip, music, and original series from the streets of Torn – anchored by LoneBlackBear.
+      <article class="hero__lead" data-tags="top featured news">
+        <a class="hero__media" href="https://youtu.be/h-gpg5EWAj8" target="_blank" rel="noopener" aria-label="Play featured clip">
+          <span class="play">▶</span>
+          <img src="https://i.ytimg.com/vi/h-gpg5EWAj8/hqdefault.jpg" alt="Featured video thumbnail" loading="lazy" />
+        </a>
+        <div class="hero__body">
+          <div class="kicker">Top story</div>
+          <h1 class="headline">TornBC TV goes live — the streets have a newsroom now</h1>
+          <p class="dek">
+            Your daily pulse on wars, markets, hustle culture, and weird Torn moments — anchored by LoneBlackBear, with Lexi2Legit on the weather desk.
           </p>
-
-          <div class="hero-cta-row">
-            <a href="https://www.youtube.com/playlist?list=PL_ZeMqAX1P35-Wio5Au7qFgWBsER3VgZC" class="btn-primary" target="_blank" rel="noopener">
-              ▶ Watch on YouTube
-            </a>
-            <a href="recruitment.html" class="btn-secondary">
-              ✉ Become a Content Creator
-            </a>
+          <div class="meta">
+            <span class="meta__item">▶ Watch: <strong>Studio intro</strong></span>
+            <span class="meta__item">•</span>
+            <span class="meta__item">Updated whenever new shorts drop</span>
           </div>
-
-          <div class="hero-meta">
-            <span class="hero-pill">Streaming via YouTube • Embedded here</span>
-            <span class="hero-pill">New: <strong>The Thunder Maker</strong> mini-series</span>
+          <div class="hero__actions">
+            <a class="btn btn--primary" href="https://www.youtube.com/playlist?list=PL_ZeMqAX1P35-Wio5Au7qFgWBsER3VgZC" target="_blank" rel="noopener">▶ Watch the full playlist</a>
+            <a class="btn btn--ghost" href="#times">Read the Torn City Times</a>
           </div>
         </div>
+      </article>
 
-        <aside class="hero-side">
-          <div class="panel">
-            <h3>Tonight on TornBC TV</h3>
-            <table class="schedule-table">
-              <thead>
-                <tr>
-                  <th>Time (TC)</th>
-                  <th>Program</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr><td>10:00</td><td>TornBC Morning News with LoneBlackBear</td></tr>
-                <tr><td>12:00</td><td>DIY &amp; Repairs – Fix It in the Alley</td></tr>
-                <tr><td>14:00</td><td>Money &amp; Markets – Torn Stock Report</td></tr>
-                <tr><td>16:00</td><td>Talk &amp; Tea – Gossip from the City</td></tr>
-                <tr><td>20:00</td><td>The Thunder Maker – New Episode</td></tr>
-              </tbody>
-            </table>
+      <aside class="hero__rail">
+
+        <section class="railCard" aria-label="Now playing">
+          <div class="railCard__head">
+            <strong>Now Playing</strong>
+            <span class="muted">Playlist view</span>
           </div>
+          <div class="embed">
+            <iframe
+              src="https://www.youtube.com/embed/videoseries?list=PL_ZeMqAX1P35-Wio5Au7qFgWBsER3VgZC"
+              title="TornBC TV Playlist"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen></iframe>
+          </div>
+        </section>
 
-          <div class="panel">
-            <h3>Channel Focus</h3>
-            <p>We cover the game world the big networks ignore: Torn life, hustles, side-gigs, and the players behind the stats.</p>
-            <div class="tag-list">
-              <span class="tag-pill">Torn news</span>
-              <span class="tag-pill">Faction life</span>
-              <span class="tag-pill">War stories</span>
-              <span class="tag-pill">Economy &amp; stocks</span>
+        <section class="railCard" id="timesQuick" aria-label="Torn City Times quick links">
+          <div class="railCard__head">
+            <strong>Torn City Times</strong>
+            <span class="muted">Newspaper sections</span>
+          </div>
+          <div class="timesLinks">
+            <a href="https://www.torn.com/newspaper.php" target="_blank" rel="noopener">Front Page</a>
+            <a href="https://www.torn.com/archives.php" target="_blank" rel="noopener">Chronicles</a>
+            <a href="https://www.torn.com/joblist.php" target="_blank" rel="noopener">Job Listing</a>
+            <a href="https://www.torn.com/properties.php" target="_blank" rel="noopener">Properties</a>
+            <a href="https://www.torn.com/freebies.php" target="_blank" rel="noopener">Freebies</a>
+            <a href="https://www.torn.com/newspaper_class.php" target="_blank" rel="noopener">Classified Ads</a>
+            <a href="https://www.torn.com/newspaper_personals.php" target="_blank" rel="noopener">Personals</a>
+            <a href="https://www.torn.com/bounties.php" target="_blank" rel="noopener">Bounties</a>
+            <a href="https://www.torn.com/comics.php" target="_blank" rel="noopener">Comics</a>
+          </div>
+          <p class="railHint">These mirror the main newspaper navigation inside Torn.</p>
+        </section>
+
+        <section class="railCard" aria-label="Sponsor slot">
+          <div class="railCard__head">
+            <strong>Sponsor</strong>
+            <span class="muted">Your ad here</span>
+          </div>
+          <p class="small">
+            Want your business on TornBC TV? We can run short video ads, story features, and homepage tiles.
+          </p>
+          <a class="btn btn--ghost btn--full" href="media-kit.html">Get the media kit</a>
+        </section>
+      </aside>
+    </section>
+
+    <!-- Top story grid -->
+    <section class="grid" aria-label="Top stories grid">
+      <div class="sectionHead">
+        <h2>Top Stories</h2>
+        <p class="muted">A KING5-style “news grid” feel — but built for Torn.</p>
+      </div>
+
+      <div class="cards" id="topCards">
+        <!-- Cards injected by JS (editable list in /js/main.js) -->
+      </div>
+    </section>
+
+    <!-- Latest -->
+    <section id="latest" class="grid" aria-label="Latest videos">
+      <div class="sectionHead">
+        <h2>Latest Videos</h2>
+        <p class="muted">Drop in your newest uploads here — reorder anytime.</p>
+      </div>
+      <div class="cards cards--dense" id="latestCards"></div>
+    </section>
+
+    <!-- Shows -->
+    <section id="shows" class="grid" aria-label="Shows">
+      <div class="sectionHead">
+        <h2>Shows</h2>
+        <p class="muted">Your “verticals” — news, markets, DIY, gossip, originals.</p>
+      </div>
+
+      <div class="showGrid">
+        <a class="show" href="shows.html#newsdesk">
+          <div class="show__kicker">Flagship</div>
+          <div class="show__title">TornBC Newsdesk</div>
+          <div class="show__desc">Wars, politics, drama, and city-wide updates.</div>
+        </a>
+
+        <a class="show" href="shows.html#money">
+          <div class="show__kicker">Economy</div>
+          <div class="show__title">Money & Markets</div>
+          <div class="show__desc">Stock watch, item trends, and hustle math.</div>
+        </a>
+
+        <a class="show" href="shows.html#diy">
+          <div class="show__kicker">DIY</div>
+          <div class="show__title">Fix It in the Alley</div>
+          <div class="show__desc">Tools, repairs, scripts, and practical builds.</div>
+        </a>
+
+        <a class="show" href="thunder-maker.html">
+          <div class="show__kicker">Original</div>
+          <div class="show__title">The Thunder Maker</div>
+          <div class="show__desc">Mini-series storytelling and cinematic shorts.</div>
+        </a>
+
+        <a class="show" href="elimination-2025.html">
+          <div class="show__kicker">Event</div>
+          <div class="show__title">Elimination 2025</div>
+          <div class="show__desc">Your documentary-style season recap.</div>
+        </a>
+
+        <a class="show" href="music.html">
+          <div class="show__kicker">Playlist</div>
+          <div class="show__title">Music Hour</div>
+          <div class="show__desc">All TornBC music in one place — sorted by vibe.</div>
+        </a>
+
+        <a class="show" href="tools.html">
+          <div class="show__kicker">Interactive</div>
+          <div class="show__title">Tools Hub</div>
+          <div class="show__desc">DopeWars sim + travel/war board — curated utility links.</div>
+        </a>
+
+        <a class="show" href="recruitment.html">
+          <div class="show__kicker">Join</div>
+          <div class="show__title">Become a Creator</div>
+          <div class="show__desc">Pitch segments, collabs, sponsorships.</div>
+        </a>
+      </div>
+    </section>
+
+
+    <!-- Interactive Tools -->
+    <section id="tools" class="grid" aria-label="Interactive tools">
+      <div class="sectionHead">
+        <h2>Interactive Tools</h2>
+        <p class="muted">The utilities we use on-air — simulations, intel boards, and travel planning.</p>
+      </div>
+
+      <div class="toolGrid">
+        <article class="toolCard">
+          <div class="toolCard__top">
+            <div class="toolIcon">🧪</div>
+            <div>
+              <div class="kicker" style="margin:0">Simulation</div>
+              <h3 class="toolTitle">Torn DopeWars — Travel Edition</h3>
             </div>
           </div>
+          <p class="toolDesc">
+            A lightweight, in-browser “DopeWars” style profit sim built for travelers — helps you plan routes, timing, and risk while on the move.
+          </p>
+          <div class="toolActions">
+            <a class="btn btn--primary" href="https://greasyfork.org/en/scripts/556952-torn-dopewars-travel-edition" target="_blank" rel="noopener">Open on GreasyFork</a>
+            <a class="btn btn--ghost" href="tools.html#dopewars">How to use</a>
+          </div>
+        </article>
 
-          <div class="panel">
-            <h3>Now Playing on TornBC TV</h3>
-            <p style="font-size:0.8rem; color:var(--text-muted); margin-bottom:0.5rem;">
-              Channel bumper and intro from the TornBC TV studio.
-            </p>
-            <div class="tv-frame">
-              <iframe
-                src="https://www.youtube.com/embed/h-gpg5EWAj8"
-                title="TornBC TV Short"
-                frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                allowfullscreen>
-              </iframe>
+        <article class="toolCard">
+          <div class="toolCard__top">
+            <div class="toolIcon">🛰️</div>
+            <div>
+              <div class="kicker" style="margin:0">Intelligence</div>
+              <h3 class="toolTitle">Walks All Over the Sky — Travel War Board</h3>
             </div>
           </div>
-        </aside>
-      
-        <!-- REPLACED RUMORS & GOSSIP CARD WITH THREE COMMERCIAL CARDS -->
-
-        <article class="card">
-          <div class="card-label">Commercial</div>
-          <h3 class="card-title">Torn City Mortgage Group</h3>
-          <p class="card-body">
-            Luxury-finance lifestyle spot: own your island with easy plans and rich &amp; famous vibes in Torn City.
+          <p class="toolDesc">
+            A high-signal travel / war coordination board — designed for planning, awareness, and “where are they now?” moments during conflict.
           </p>
-          <div class="tv-frame">
-            <iframe
-              src="https://www.youtube.com/embed/bNubshJGeUc"
-              title="Torn City Mortgage Group Commercial"
-              frameborder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              allowfullscreen>
-            </iframe>
+          <div class="toolActions">
+            <a class="btn btn--primary" href="https://greasyfork.org/en/scripts/556238-walks-all-over-the-sky-torn-travel-war-board" target="_blank" rel="noopener">Open on GreasyFork</a>
+            <a class="btn btn--ghost" href="tools.html#skyboard">How to use</a>
           </div>
         </article>
 
-        <article class="card">
-          <div class="card-label">Commercial</div>
-          <h3 class="card-title">FFScouter – Fight Smart</h3>
-          <p class="card-body">
-            Tactical HUD-style ad showing how FFScouter helps you pick the right targets and avoid wasting E.
-          </p>
-          <div class="tv-frame">
-            <iframe
-              src="https://www.youtube.com/embed/rOnheqf6iWY"
-              title="FFScouter Commercial"
-              frameborder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              allowfullscreen>
-            </iframe>
+        <article class="toolCard toolCard--wide">
+          <div class="toolCard__top">
+            <div class="toolIcon">📎</div>
+            <div>
+              <div class="kicker" style="margin:0">Hub</div>
+              <h3 class="toolTitle">Tools Hub</h3>
+            </div>
           </div>
-        </article>
-
-        <article class="card">
-          <div class="card-label">Commercial</div>
-          <h3 class="card-title">Buying Caps – OrangeSoda01</h3>
-          <p class="card-body">
-            Noir-style corner-store deal: LoneBlackBear trades bottle caps for cash with the animated can OrangeSoda01.
+          <p class="toolDesc">
+            A clean landing page with install notes, use-cases, and quick links (built in the same KING5-style layout as the site).
           </p>
-          <div class="tv-frame">
-            <iframe
-              src="https://www.youtube.com/embed/YPjWePtWvNg"
-              title="Buying Caps Commercial – OrangeSoda01"
-              frameborder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              allowfullscreen>
-            </iframe>
-          </div>
-        </article>
-
-        <!-- END COMMERCIAL CARDS -->
-
-        <article class="card">
-          <div class="card-label">Sports</div>
-          <h3 class="card-title">Trackside Interview & Crash</h3>
-          <p class="card-body">
-            LoneBlackBear interviews the race organizer moments before a dramatic on-track collision shakes up the event.
-          </p>
-          <div class="tv-frame">
-            <iframe
-              src="https://www.youtube.com/embed/XxR4YNkdduU"
-              title="Sports Interview with Crash"
-              frameborder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              allowfullscreen>
-            </iframe>
-          </div>
-        </article>
-
-      </div>
-    </section>
-
-    <section class="section">
-      <div class="section-header">
-        <div>
-          <div class="section-title">Programming slate</div>
-          <h2>Featured Shows</h2>
-        </div>
-        <p>Deep dives, light gossip, serious markets, and original storytelling – all in one channel.</p>
-      </div>
-
-      <div class="card-grid">
-        <article class="card">
-          <div class="card-label">Flagship News</div>
-          <h3 class="card-title"><a href="shows.html#newsdesk">TornBC Newsdesk</a></h3>
-          <p class="card-body">
-            Daily updates on wars, politics, markets, and life in Torn – hosted by LoneBlackBear at the anchor desk.
-          </p>
-          <div class="card-meta">
-            <span>Format: News / Analysis</span>
-            <span>New episodes: 3x per week</span>
-          </div>
-        </article>
-
-        <article class="card">
-          <div class="card-label">DIY &amp; Life</div>
-          <h3 class="card-title"><a href="shows.html#diy">DIY &amp; Repairs</a></h3>
-          <p class="card-body">
-            Tools, builds, scooter fixes, electronics hacks, and real-world projects you can actually copy.
-          </p>
-          <div class="card-meta">
-            <span>Format: Tutorial</span>
-            <span>Runtime: 10–20 mins</span>
-          </div>
-        </article>
-
-        <article class="card">
-          <div class="card-label">Economy</div>
-          <h3 class="card-title"><a href="shows.html#money">Money &amp; Markets</a></h3>
-          <p class="card-body">
-            Torn stock market coverage, item trends, and side-gig strategies – from hospital flips to casino grinds.
-          </p>
-          <div class="card-meta">
-            <span>Format: Analysis</span>
-            <span>Includes: Charts &amp; overlays</span>
-          </div>
-        </article>
-
-        <article class="card">
-          <div class="card-label">Original Series</div>
-          <h3 class="card-title"><a href="thunder-maker.html">The Thunder Maker</a>
-        <a href="elimination-2025.html">Elimination 2025</a></h3>
-          <p class="card-body">
-            A four-part mini-series blending Native storytelling, storms, and the power behind the clouds.
-          </p>
-          <div class="card-meta">
-            <span>Season 1: 4 episodes</span>
-            <span><a href="thunder-maker.html">Series page →</a></span>
-          </div>
-        </article>
-      </div>
-    </section>
-
-  
-    <section class="section">
-      <div class="section-header">
-        <div>
-          <div class="section-title">Latest Daily Segments</div>
-          <h2>Today on TornBC TV</h2>
-        </div>
-        <p>Watch the latest shorts from the TornBC TV newsroom: intros, DIY tools, and the money market report.</p>
-      </div>
-
-      <div class="card-grid">
-        <article class="card">
-          <div class="card-label">News Intro</div>
-          <h3 class="card-title">Daily News Segment Intro</h3>
-          <p class="card-body">
-            Start of the broadcast day with LoneBlackBear welcoming viewers to TornBC TV.
-          </p>
-          <div class="tv-frame">
-            <iframe
-              src="https://www.youtube.com/embed/u1EFTyMuxj0"
-              title="TornBC TV Daily News Intro"
-              frameborder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              allowfullscreen>
-            </iframe>
-          </div>
-        </article>
-
-        <article class="card">
-          <div class="card-label">DIY &amp; Tools</div>
-          <h3 class="card-title">Walks All Over the Sky Tool</h3>
-          <p class="card-body">
-            DIY segment introducing the Walks All Over the Sky targeting tool for Torn fighters.
-          </p>
-          <div class="tv-frame">
-            <iframe
-              src="https://www.youtube.com/embed/WpQ1F_3WyeQ"
-              title="DIY: Walks All Over the Sky Targeting Tool"
-              frameborder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              allowfullscreen>
-            </iframe>
-          </div>
-        </article>
-
-        <article class="card">
-          <div class="card-label">Money &amp; Markets</div>
-          <h3 class="card-title">Could Xanax Hit $1,000,000?</h3>
-          <p class="card-body">
-            Money market segment asking if Xanax prices in Torn could reach one million.
-          </p>
-          <div class="tv-frame">
-            <iframe
-              src="https://www.youtube.com/embed/Bi6NlMpkMiw"
-              title="Money Market: Xanax to $1,000,000?"
-              frameborder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              allowfullscreen>
-            </iframe>
+          <div class="toolActions">
+            <a class="btn btn--ghost" href="tools.html">Open Tools Hub</a>
           </div>
         </article>
       </div>
     </section>
 
 
-  
-    <section class="section">
-      <div class="section-header">
-        <div>
-          <div class="section-title">More from TornBC TV</div>
-          <h2>All Current Shorts</h2>
-        </div>
-        <p>All the latest TornBC TV shorts collected on one page for easy viewing.</p>
+    <!-- Torn City Times -->
+    <section id="times" class="grid" aria-label="Torn City Times">
+      <div class="sectionHead">
+        <h2>Torn City Times</h2>
+        <p class="muted">A homepage “newspaper column” that points to the official Torn sections.</p>
       </div>
 
-      <div class="card-grid">
-        <article class="card">
-          <div class="card-label">Channel Promo</div>
-          <h3 class="card-title">TornBC TV Channel Bumper</h3>
-          <p class="card-body">
-            Quick channel bumper used between segments on TornBC TV.
-          </p>
-          <div class="tv-frame">
-            <iframe
-              src="https://www.youtube.com/embed/NT09yiyC6q8"
-              title="TornBC TV Channel Bumper"
-              frameborder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              allowfullscreen>
-            </iframe>
-          </div>
+      <div class="timesGrid">
+        <article class="timesCard">
+          <h3>Front Page</h3>
+          <p>Headlines, featured articles, and daily updates in Torn’s newspaper.</p>
+          <a class="btn btn--ghost" href="https://www.torn.com/newspaper.php" target="_blank" rel="noopener">Open Front Page</a>
         </article>
+        <article class="timesCard">
+          <h3>Archive</h3>
+          <p>Older editions and back-catalog content. Great for lore & history.</p>
+          <a class="btn btn--ghost" href="https://www.torn.com/newspaper.php#archive" target="_blank" rel="noopener">Open Archive</a>
+        </article>
+        <article class="timesCard">
+          <h3>Chronicles</h3>
+          <p>Long-form Torn history and major-event writeups.</p>
+          <a class="btn btn--ghost" href="https://www.torn.com/archives.php" target="_blank" rel="noopener">Open Chronicles</a>
+        </article>
+        <article class="timesCard">
+          <h3>Job Listing</h3>
+          <p>Companies hiring now — and your best way to recruit talent.</p>
+          <a class="btn btn--ghost" href="https://www.torn.com/joblist.php" target="_blank" rel="noopener">Open Job Listing</a>
+        </article>
+        <article class="timesCard">
+          <h3>Classified Ads</h3>
+          <p>Buy/sell and services. (Perfect for TornBC sponsor slots too.)</p>
+          <a class="btn btn--ghost" href="https://www.torn.com/newspaper_class.php" target="_blank" rel="noopener">Open Classifieds</a>
+        </article>
+        <article class="timesCard">
+          <h3>Comics</h3>
+          <p>Weekly fun. We can cross-post TornBC cartoons here too.</p>
+          <a class="btn btn--ghost" href="https://www.torn.com/comics.php" target="_blank" rel="noopener">Open Comics</a>
+        </article>
+      </div>
 
-        <article class="card">
-          <div class="card-label">Studio</div>
-          <h3 class="card-title">Studio Intro & Camera Test</h3>
-          <p class="card-body">
-            A short cut from the studio floor, testing cameras and getting ready to go live.
-          </p>
-          <div class="tv-frame">
-            <iframe
-              src="https://www.youtube.com/embed/F3mqsTlhH9w"
-              title="Studio Intro & Camera Test"
-              frameborder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              allowfullscreen>
-            </iframe>
-          </div>
-        </article>
-
-        <article class="card">
-          <div class="card-label">Channel Promo</div>
-          <h3 class="card-title">Main TornBC TV Promo</h3>
-          <p class="card-body">
-            High-energy promo spot for the TornBC TV channel and its upcoming programming.
-          </p>
-          <div class="tv-frame">
-            <iframe
-              src="https://www.youtube.com/embed/Dz4tCJ2RQdk"
-              title="Main TornBC TV Promo"
-              frameborder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              allowfullscreen>
-            </iframe>
-          </div>
-        </article>
-
-        <article class="card">
-          <div class="card-label">Behind the Scenes</div>
-          <h3 class="card-title">Studio & Production Short</h3>
-          <p class="card-body">
-            A quick look at the crew, the studio, or fun experiments between segments.
-          </p>
-          <div class="tv-frame">
-            <iframe
-              src="https://www.youtube.com/embed/b7pwxAtXJwI"
-              title="Studio & Production Short"
-              frameborder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              allowfullscreen>
-            </iframe>
-          </div>
-        </article>
-
-        <article class="card">
-          <div class="card-label">Community</div>
-          <h3 class="card-title">Message to Torn City</h3>
-          <p class="card-body">
-            A community-facing short featuring LoneBlackBear speaking directly to Torn City.
-          </p>
-          <div class="tv-frame">
-            <iframe
-              src="https://www.youtube.com/embed/Psjksg6TtVg"
-              title="Community Message to Torn City"
-              frameborder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              allowfullscreen>
-            </iframe>
-          </div>
-        </article>
+      <div class="note">
+        <strong>Tip:</strong> Torn’s newspaper content is inside the game session, so this site links out to each section rather than trying to scrape it.
       </div>
     </section>
 
-    <!-- NEW STAFF & INTROS SECTION -->
-    <section class="section">
-      <div class="section-header">
-        <div>
-          <div class="section-title">Staff & Intros</div>
-          <h2>Meet the TornBC TV Team</h2>
-        </div>
-        <p>Spotlight shorts introducing the people behind TornBC TV – creators, artists, and on-air talent.</p>
+    <!-- Weather -->
+    <section id="weather" class="grid" aria-label="Weather desk">
+      <div class="sectionHead">
+        <h2>Weather Desk</h2>
+        <p class="muted">Lexi2Legit delivers the forecast — Torn-style.</p>
       </div>
 
-      <div class="card-grid">
-
-        <!-- AkariWata Intro -->
-        <article class="card">
-          <div class="card-label">Visual Artist</div>
-          <h3 class="card-title">Staff Intro: AkariWata</h3>
-          <p class="card-body">
-            A quick introduction to AkariWata, TornBC TV's Visual Artist and VFX editor.
-          </p>
-          <div class="tv-frame">
+      <div class="twoCol">
+        <div class="panel">
+          <h3>On-air forecast</h3>
+          <div class="embed">
             <iframe
-              src="https://www.youtube.com/embed/GCa9RDAQGLU"
-              title="Staff Intro: AkariWata"
+              src="https://www.youtube.com/embed/h-gpg5EWAj8"
+              title="Weather / Studio clip"
               frameborder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              allowfullscreen>
-            </iframe>
+              allowfullscreen></iframe>
           </div>
-        </article>
+          <p class="small">Swap this embed for your dedicated weather short whenever you want.</p>
+        </div>
 
-        <!-- Lexi2Legit Intro -->
-        <article class="card">
-          <div class="card-label">Co-Owner & Weather</div>
-          <h3 class="card-title">Staff Intro: Lexi2Legit</h3>
-          <p class="card-body">
-            Meet Lexi2Legit, Co-Owner of TornBC TV and head of the Torn City weather desk.
-          </p>
-          <div class="tv-frame">
-            <iframe
-              src="https://www.youtube.com/embed/uaRiheWruR0"
-              title="Staff Intro: Lexi2Legit"
-              frameborder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              allowfullscreen>
-            </iframe>
-          </div>
-        </article>
-
+        <div class="panel">
+          <h3>Torn City Forecast (fun module)</h3>
+          <ul class="forecast" id="forecastList">
+            <!-- JS fills -->
+          </ul>
+          <p class="small muted">This is a playful “news-site” widget — not an official Torn mechanic.</p>
+        </div>
       </div>
     </section>
 
-    <!-- NEW MUSIC PLAYLIST SECTION -->
-    <section class="section">
-      <div class="section-header">
-        <div>
-          <div class="section-title">Music & Soundtrack</div>
-          <h2>TornBC TV Music Playlist</h2>
-        </div>
-        <p>The official TornBC TV music playlist – background tracks, moods, and themes for your time in Torn City.</p>
+    <!-- Markets -->
+    <section id="markets" class="grid" aria-label="Markets">
+      <div class="sectionHead">
+        <h2>Markets</h2>
+        <p class="muted">Economy tiles like a local news site — but tracking Torn trends.</p>
       </div>
 
-      <div class="card-grid">
-        <article class="card">
-          <div class="card-label">Playlist</div>
-          <h3 class="card-title">TornBC TV Music Collection</h3>
-          <p class="card-body">
-            Listen to the full curated TornBC TV music playlist directly from YouTube.
+      <div class="cards cards--dense" id="marketCards"></div>
+    </section>
+
+    <!-- Community -->
+    <section id="community" class="grid" aria-label="Community">
+      <div class="sectionHead">
+        <h2>Community</h2>
+        <p class="muted">Announcements, staff intros, and sponsor spots.</p>
+      </div>
+
+      <div class="cards" id="communityCards"></div>
+    </section>
+
+    <!-- About -->
+    <section id="about" class="grid" aria-label="About TornBC TV">
+      <div class="sectionHead">
+        <h2>About TornBC TV</h2>
+        <p class="muted">A fan-made network built by players, for players.</p>
+      </div>
+
+      <div class="about">
+        <div class="about__card">
+          <h3>What this is</h3>
+          <p>
+            TornBC TV is an independent fan project: news-style coverage, documentaries, and creative shorts set inside Torn City.
+            Everything here is curated manually so you stay in control of what shows on the homepage.
           </p>
-          <div class="tv-frame">
-            <iframe
-              src="https://www.youtube.com/embed/videoseries?list=PL_ZeMqAX1P36hy_-GWqM7o87zJUG--9aF"
-              title="TornBC TV Music Playlist"
-              frameborder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              allowfullscreen>
-            </iframe>
+        </div>
+
+        <div class="about__card">
+          <h3>How to update</h3>
+          <ol>
+            <li>Open <code>/js/main.js</code> and paste new YouTube IDs into the lists.</li>
+            <li>Reorder cards by moving objects up/down.</li>
+            <li>Deploy to GitHub Pages / Cloudflare Pages like you already do.</li>
+          </ol>
+        </div>
+
+        <div class="about__card">
+          <h3>Contact</h3>
+          <p>
+            Primary contact: <strong>LoneBlackBear</strong> (in-game). Collabs welcome — reporters, editors, artists, and sponsors.
+          </p>
+          <div class="about__actions">
+            <a class="btn btn--ghost" href="recruitment.html">Join the team</a>
+            <a class="btn btn--ghost" href="media-kit.html">Sponsor info</a>
           </div>
-        </article>
+        </div>
       </div>
     </section>
 
   </main>
 
   <footer class="footer">
-    <div class="footer-inner">
-      <span>© <span id="year"></span> TornBC TV. An independent fan project for Torn City.</span>
-      <span>Primary contact: LoneBlackBear in-game • Torn forums / mail</span>
+    <div class="container footer__inner">
+      <div class="footer__left">
+        <div class="footer__brand">TornBC TV</div>
+        <div class="muted small">© <span id="year"></span> • Independent fan project for Torn City</div>
+      </div>
+      <div class="footer__right">
+        <a href="#top">Back to top</a>
+      </div>
     </div>
   </footer>
 
-  <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
-  </script>
+  <script src="js/main.js"></script>
 </body>
 </html>

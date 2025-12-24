@@ -1,102 +1,114 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <title>TornBC TV – Join the Network</title>
+  <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>TornBC TV • Join the Network</title>
+  <meta name="description" content="TornBC TV — Independent broadcasting from Torn City." />
+  <link rel="preconnect" href="https://www.youtube.com" />
+  <link rel="preconnect" href="https://i.ytimg.com" />
   <link rel="stylesheet" href="css/styles.css" />
 </head>
 <body>
-  <header class="top-bar">
-    <div class="top-bar-inner">
-      <div class="logo-mark"><span>TB</span></div>
-      <div class="site-title-block">
-        <h1>TornBC TV</h1>
-        <span>Independent Broadcasting from Torn City • Hosted by LoneBlackBear</span>
+  <header class="utility">
+    <div class="container utility__inner">
+      <div class="utility__left">
+        <span class="pill">TBCTV</span>
+        <span class="muted">Independent Broadcasting from Torn City</span>
+      </div>
+      <div class="utility__right">
+        <span id="tcClock" class="utility__clock"></span>
+        <a class="utility__link" href="index.html">Home</a>
+        <a class="utility__link" href="https://www.youtube.com/playlist?list=PL_ZeMqAX1P35-Wio5Au7qFgWBsER3VgZC" target="_blank" rel="noopener">Watch playlist</a>
       </div>
     </div>
   </header>
 
-  <nav class="nav">
-    <div class="nav-inner">
-      <div class="nav-links">
-        <a href="index.html">Home</a>
-        <a href="shows.html">Shows</a>
-        <a href="thunder-maker.html">The Thunder Maker</a>
-        <a href="recruitment.html" class="nav-active">Join the Network</a>
-        <a href="media-kit.html">Media Kit</a>
+  <div class="mast">
+    <div class="container mast__inner">
+      <a class="brand" href="index.html" aria-label="TornBC TV Home">
+        <div class="brand__mark">TB</div>
+        <div class="brand__text">
+          <div class="brand__name">TornBC TV</div>
+          <div class="brand__tag">News • Weather • Markets • DIY • Originals</div>
+        </div>
+      </a>
+      <div class="nav__right">
+        <a class="btn btn--ghost" href="music.html">♫ Music</a>
+        <a class="btn btn--ghost" href="thunder-maker.html">⚡ Thunder Maker</a>
+        <a class="btn btn--ghost" href="elimination-2025.html">🏁 Elimination</a>
       </div>
-      <div class="nav-tagline">News • DIY • Markets • Gossip • Music • Originals</div>
+    </div>
+  </div>
+
+  <nav class="nav" aria-label="Primary">
+    <div class="container nav__inner">
+      <button class="nav__menu" id="menuBtn" aria-controls="navDrawer" aria-expanded="false">☰ Sections</button>
+      <div class="nav__links" id="navLinks">
+        <a href="index.html#top">Top Stories</a>
+        <a href="index.html#latest">Latest Videos</a>
+        <a href="index.html#shows">Shows</a>
+        <a href="index.html#times">Torn City Times</a>
+        <a href="index.html#weather">Weather Desk</a>
+        <a href="index.html#markets">Markets</a>
+        <a href="index.html#community">Community</a>
+        <a href="index.html#about">About</a>
+      </div>
+      <div class="nav__right">
+        <a class="btn btn--primary" href="https://www.youtube.com/playlist?list=PL_ZeMqAX1P35-Wio5Au7qFgWBsER3VgZC" target="_blank" rel="noopener">▶ Watch</a>
+      </div>
     </div>
   </nav>
 
-  <main class="wrapper">
+  <aside class="drawer" id="navDrawer" aria-hidden="true">
+    <div class="drawer__head">
+      <strong>Sections</strong>
+      <button class="drawer__close" id="closeDrawer" aria-label="Close">✕</button>
+    </div>
+    <div class="drawer__links">
+      <a href="index.html#top">Top Stories</a>
+      <a href="index.html#latest">Latest Videos</a>
+      <a href="index.html#shows">Shows</a>
+      <a href="index.html#times">Torn City Times</a>
+      <a href="index.html#weather">Weather Desk</a>
+      <a href="index.html#markets">Markets</a>
+      <a href="index.html#community">Community</a>
+      <a href="index.html#about">About</a>
+      <a href="music.html">♫ Music</a>
+      <a href="thunder-maker.html">⚡ Thunder Maker</a>
+      <a href="elimination-2025.html">🏁 Elimination</a>
+    </div>
+    <div class="drawer__foot">
+      <a class="btn btn--primary btn--full" href="https://www.youtube.com/playlist?list=PL_ZeMqAX1P35-Wio5Au7qFgWBsER3VgZC" target="_blank" rel="noopener">▶ Open Playlist</a>
+    </div>
+  </aside>
 
-    <section class="page-header">
-      <h1>Join the TornBC TV Network</h1>
-      <p>We’re building a collaborative channel for Torn. If you’ve got a show idea, we want to hear it.</p>
-    </section>
-
-    <section class="page-two-col">
-      <div>
-        <h2>Who We’re Looking For</h2>
-        <p>
-          We’re especially interested in creators who bring something real from their game or real life:
-          war reporters, faction leaders, traders, builders, storytellers, musicians, and quiet grinders
-          with sharp minds.
-        </p>
-
-        <h3>Possible Show Types</h3>
-        <ul class="show-meta-list">
-          <li>Faction or war analysis segments</li>
-          <li>Travel diaries, hustles, or “day in the life” episodes</li>
-          <li>Guides for new players (earning, surviving, leveling)</li>
-          <li>Real-world DIY, repairs, and tools</li>
-          <li>Music blocks, playlists, or visualizers</li>
-          <li>Fiction, lore, or alternate-history storytelling</li>
-        </ul>
-
-        <h2>How to Apply</h2>
-        <p>
-          All applications go through in-game mail or forum message to <strong>LoneBlackBear</strong>.
-          When you reach out, include:
-        </p>
-        <ul class="show-meta-list">
-          <li>Your in-game name</li>
-          <li>Working show title</li>
-          <li>Short description (2–4 sentences)</li>
-          <li>Format (live, recorded, voiceover, facecam, footage-only, etc.)</li>
-          <li>Rough episode length and how often you think you can post</li>
-          <li>Any links to previous videos or samples</li>
-        </ul>
-      </div>
-
-      <aside class="panel">
-        <h3>Creator Expectations</h3>
-        <ul class="show-meta-list">
-          <li>Respectful to other players and cultures</li>
-          <li>Complies with Torn’s game rules and ToS</li>
-          <li>No hate, doxxing, or targeted harassment</li>
-          <li>We can discuss masking names/factions if needed</li>
-        </ul>
-        <p style="margin-top:0.8rem;">
-          TornBC TV is a collaborative hobby project, not a company. For now, roles are volunteer and
-          credit-based, but we’ll always be up front if anything changes.
-        </p>
-      </aside>
-    </section>
+  <main class="container main">
+    
+<section class="pageHead">
+  <div>
+    <h1>Join the Network</h1>
+    <p class="muted">Placeholder page. Tell me what you want here and I’ll format it like a proper KING5-style section page.</p>
+  </div>
+</section>
+<section class="panel">
+  <p class="muted">You can replace this file anytime.</p>
+</section>
 
   </main>
 
   <footer class="footer">
-    <div class="footer-inner">
-      <span>© <span id="year"></span> TornBC TV. An independent fan project for Torn City.</span>
-      <span>Primary contact: LoneBlackBear in-game • Torn forums / mail</span>
+    <div class="container footer__inner">
+      <div class="footer__left">
+        <div class="footer__brand">TornBC TV</div>
+        <div class="muted small">© <span id="year"></span> • Independent fan project for Torn City</div>
+      </div>
+      <div class="footer__right">
+        <a href="index.html#top">Back to home</a>
+      </div>
     </div>
   </footer>
 
-  <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
-  </script>
+  <script src="js/main.js"></script>
 </body>
 </html>

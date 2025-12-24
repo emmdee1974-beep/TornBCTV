@@ -1,131 +1,114 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <title>TornBC TV – Media Kit</title>
+  <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>TornBC TV • Media Kit</title>
+  <meta name="description" content="TornBC TV — Independent broadcasting from Torn City." />
+  <link rel="preconnect" href="https://www.youtube.com" />
+  <link rel="preconnect" href="https://i.ytimg.com" />
   <link rel="stylesheet" href="css/styles.css" />
 </head>
 <body>
-  <header class="top-bar">
-    <div class="top-bar-inner">
-      <div class="logo-mark"><span>TB</span></div>
-      <div class="site-title-block">
-        <h1>TornBC TV</h1>
-        <span>Independent Broadcasting from Torn City • Hosted by LoneBlackBear</span>
+  <header class="utility">
+    <div class="container utility__inner">
+      <div class="utility__left">
+        <span class="pill">TBCTV</span>
+        <span class="muted">Independent Broadcasting from Torn City</span>
+      </div>
+      <div class="utility__right">
+        <span id="tcClock" class="utility__clock"></span>
+        <a class="utility__link" href="index.html">Home</a>
+        <a class="utility__link" href="https://www.youtube.com/playlist?list=PL_ZeMqAX1P35-Wio5Au7qFgWBsER3VgZC" target="_blank" rel="noopener">Watch playlist</a>
       </div>
     </div>
   </header>
 
-  <nav class="nav">
-    <div class="nav-inner">
-      <div class="nav-links">
-        <a href="index.html">Home</a>
-        <a href="shows.html">Shows</a>
-        <a href="thunder-maker.html">The Thunder Maker</a>
-        <a href="recruitment.html">Join the Network</a>
-        <a href="media-kit.html" class="nav-active">Media Kit</a>
+  <div class="mast">
+    <div class="container mast__inner">
+      <a class="brand" href="index.html" aria-label="TornBC TV Home">
+        <div class="brand__mark">TB</div>
+        <div class="brand__text">
+          <div class="brand__name">TornBC TV</div>
+          <div class="brand__tag">News • Weather • Markets • DIY • Originals</div>
+        </div>
+      </a>
+      <div class="nav__right">
+        <a class="btn btn--ghost" href="music.html">♫ Music</a>
+        <a class="btn btn--ghost" href="thunder-maker.html">⚡ Thunder Maker</a>
+        <a class="btn btn--ghost" href="elimination-2025.html">🏁 Elimination</a>
       </div>
-      <div class="nav-tagline">News • DIY • Markets • Gossip • Music • Originals</div>
+    </div>
+  </div>
+
+  <nav class="nav" aria-label="Primary">
+    <div class="container nav__inner">
+      <button class="nav__menu" id="menuBtn" aria-controls="navDrawer" aria-expanded="false">☰ Sections</button>
+      <div class="nav__links" id="navLinks">
+        <a href="index.html#top">Top Stories</a>
+        <a href="index.html#latest">Latest Videos</a>
+        <a href="index.html#shows">Shows</a>
+        <a href="index.html#times">Torn City Times</a>
+        <a href="index.html#weather">Weather Desk</a>
+        <a href="index.html#markets">Markets</a>
+        <a href="index.html#community">Community</a>
+        <a href="index.html#about">About</a>
+      </div>
+      <div class="nav__right">
+        <a class="btn btn--primary" href="https://www.youtube.com/playlist?list=PL_ZeMqAX1P35-Wio5Au7qFgWBsER3VgZC" target="_blank" rel="noopener">▶ Watch</a>
+      </div>
     </div>
   </nav>
 
-  <main class="wrapper">
+  <aside class="drawer" id="navDrawer" aria-hidden="true">
+    <div class="drawer__head">
+      <strong>Sections</strong>
+      <button class="drawer__close" id="closeDrawer" aria-label="Close">✕</button>
+    </div>
+    <div class="drawer__links">
+      <a href="index.html#top">Top Stories</a>
+      <a href="index.html#latest">Latest Videos</a>
+      <a href="index.html#shows">Shows</a>
+      <a href="index.html#times">Torn City Times</a>
+      <a href="index.html#weather">Weather Desk</a>
+      <a href="index.html#markets">Markets</a>
+      <a href="index.html#community">Community</a>
+      <a href="index.html#about">About</a>
+      <a href="music.html">♫ Music</a>
+      <a href="thunder-maker.html">⚡ Thunder Maker</a>
+      <a href="elimination-2025.html">🏁 Elimination</a>
+    </div>
+    <div class="drawer__foot">
+      <a class="btn btn--primary btn--full" href="https://www.youtube.com/playlist?list=PL_ZeMqAX1P35-Wio5Au7qFgWBsER3VgZC" target="_blank" rel="noopener">▶ Open Playlist</a>
+    </div>
+  </aside>
 
-    <section class="page-header">
-      <h1>TornBC TV Media Kit</h1>
-      <p>Channel overview, audience snapshot, and collaboration options for partners, sponsors, and fellow creators.</p>
-    </section>
-
-    <section class="section">
-      <div class="section-header">
-        <div>
-          <div class="section-title">Overview</div>
-          <h2>What is TornBC TV?</h2>
-        </div>
-      </div>
-
-      <dl class="definition-list">
-        <dt>Elevator Pitch</dt>
-        <dd>
-          TornBC TV is an independent, fan-run broadcast channel for the browser game Torn. We produce news,
-          DIY, money-market coverage, gossip, music, and original series for players who want something deeper
-          than a single forum post or Discord ping.
-        </dd>
-
-        <dt>Core Identity</dt>
-        <dd>
-          A fictional TV station inside Torn, anchored by an on-screen persona – LoneBlackBear – who appears as
-          a black bear news host. The style mixes classic TV news, light propaganda aesthetics, and grounded
-          real-life builds and stories.
-        </dd>
-
-        <dt>Primary Platforms</dt>
-        <dd>
-          YouTube (full episodes and series) and this site as the hub for show pages, thumbnails,
-          schedules, and recruitment.
-        </dd>
-      </dl>
-    </section>
-
-    <section class="section">
-      <div class="section-header">
-        <div>
-          <div class="section-title">Programming</div>
-          <h2>Show Lineup Highlights</h2>
-        </div>
-      </div>
-
-      <div class="card-grid">
-        <article class="card">
-          <div class="card-label">News</div>
-          <h3 class="card-title">TornBC Newsdesk</h3>
-          <p class="card-body">
-            Anchor-led coverage of wars, politics, updates, and player movements, often with overlays, charts, and visual explainers.
-          </p>
-          <div class="card-meta">
-            <span>Format: News / Commentary</span>
-            <span>Host: LoneBlackBear</span>
-          </div>
-        </article>
-
-        <article class="card">
-          <div class="card-label">DIY</div>
-          <h3 class="card-title">DIY &amp; Repairs</h3>
-          <p class="card-body">
-            Real-world tools, electronics, vehicles, builds and experiments that fit the mindset of Torn: resourceful, practical, and a bit scrappy.
-          </p>
-          <div class="card-meta">
-            <span>Format: Tutorial</span>
-            <span>Location: Home workshop</span>
-          </div>
-        </article>
-
-        <article class="card">
-          <div class="card-label">Originals</div>
-          <h3 class="card-title">The Thunder Maker</h3>
-          <p class="card-body">
-            A 4-part original mini-series combining Native storytelling and visual storm imagery, produced and narrated by LoneBlackBear.
-          </p>
-          <div class="card-meta">
-            <span>Season 1: 4 episodes</span>
-            <span>Use: Embeddable with credit</span>
-          </div>
-        </article>
-      </div>
-    </section>
+  <main class="container main">
+    
+<section class="pageHead">
+  <div>
+    <h1>Media Kit</h1>
+    <p class="muted">Placeholder page. Tell me what you want here and I’ll format it like a proper KING5-style section page.</p>
+  </div>
+</section>
+<section class="panel">
+  <p class="muted">You can replace this file anytime.</p>
+</section>
 
   </main>
 
   <footer class="footer">
-    <div class="footer-inner">
-      <span>© <span id="year"></span> TornBC TV. An independent fan project for Torn City.</span>
-      <span>Primary contact: LoneBlackBear in-game • Torn forums / mail</span>
+    <div class="container footer__inner">
+      <div class="footer__left">
+        <div class="footer__brand">TornBC TV</div>
+        <div class="muted small">© <span id="year"></span> • Independent fan project for Torn City</div>
+      </div>
+      <div class="footer__right">
+        <a href="index.html#top">Back to home</a>
+      </div>
     </div>
   </footer>
 
-  <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
-  </script>
+  <script src="js/main.js"></script>
 </body>
 </html>
