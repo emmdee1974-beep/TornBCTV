@@ -3,126 +3,143 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>TornBC TV — About</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="assets/style.css" />
+  <title>About TornBC TV</title>
+  <meta name="description" content="TornBC TV — Independent broadcasting from Torn City. News, weather, markets, DIY, gossip, and original series hosted by LoneBlackBear." />
+  <link rel="preconnect" href="https://www.youtube.com" />
+  <link rel="preconnect" href="https://i.ytimg.com" />
+  <link rel="stylesheet" href="css/styles.css" />
 </head>
-<body class="grid-bg">
-  <header class="topbar">
-    <div class="wrap">
-      <div class="brand">
-        <div class="logo">
-          <div class="logoMark" aria-hidden="true"></div>
-          <div class="brandTitle">
-            <h1>TornBC TV</h1>
-            <p>Neon news, shows, tools — Torn City style.</p>
-          </div>
-        </div>
 
-        <nav class="nav" aria-label="Primary">
-          <a class="btn" href="index.html">Home</a>
-
-          <div class="dd" aria-expanded="false">
-            <button class="btn" type="button">News ▾</button>
-            <div class="menu" role="menu">
-              <a href="news.html">Top Stories</a>
-              <a href="times.html">Torn City Times</a>
-              <a href="weather.html">Weather Desk</a>
-              <a href="markets.html">Money & Markets</a>
-            </div>
-          </div>
-
-          <div class="dd" aria-expanded="false">
-            <button class="btn" type="button">Shows ▾</button>
-            <div class="menu" role="menu">
-              <a href="shows.html">All Shows</a>
-              <a href="thundermaker.html">Thunder Maker</a>
-            </div>
-          </div>
-
-          <div class="dd" aria-expanded="false">
-            <button class="btn" type="button">Tools ▾</button>
-            <div class="menu" role="menu">
-              <a href="tools.html">Interactive Tools</a>
-              <a href="music.html">Music</a>
-            </div>
-          </div>
-
-          <div class="dd" aria-expanded="false">
-            <button class="btn" type="button">Community ▾</button>
-            <div class="menu" role="menu">
-              <a href="community.html">Community</a>
-              <a href="ads.html">Advertise</a>
-              <a href="about.html">About</a>
-            </div>
-          </div>
-        </nav>
-
-        <button class="btn mobileToggle" type="button" data-mobile-toggle>Menu ▾</button>
+<body>
+  <!-- Utility bar -->
+  <header class="utility">
+    <div class="container utility__inner">
+      <div class="utility__left">
+        <span class="pill">TBCTV</span>
+        <span class="muted">Independent Broadcasting from Torn City</span>
       </div>
-
-      <div class="mobileDrawer" data-mobile-drawer>
-        <a href="index.html">Home</a>
-        <a href="news.html">Top Stories</a>
-        <a href="times.html">Torn City Times</a>
-        <a href="weather.html">Weather Desk</a>
-        <a href="markets.html">Money & Markets</a>
-        <a href="shows.html">Shows</a>
-        <a href="thundermaker.html">Thunder Maker</a>
-        <a href="tools.html">Tools</a>
-        <a href="music.html">Music</a>
-        <a href="community.html">Community</a>
-        <a href="ads.html">Advertise</a>
-        <a href="about.html">About</a>
+      <div class="utility__right">
+        <span id="tcClock" class="utility__clock" title="Torn City Time (approx)"></span>
+        <a class="utility__link" href="https://www.youtube.com/playlist?list=PL_ZeMqAX1P35-Wio5Au7qFgWBsER3VgZC" target="_blank" rel="noopener">Watch playlist</a>
+        <a class="utility__link" href="recruitment.html">Join the Network</a>
       </div>
     </div>
   </header>
 
-  
-<main class="hero">
-  <div class="wrap">
-    <section class="card">
-      <div class="cardHead">
-        <div class="kicker">About</div>
-        <h2 class="hTitle">What is TornBC TV?</h2>
-        <p class="p">A community media network for Torn City — news, weather, shows, tools, and creator spotlights.</p>
+  <!-- Main masthead -->
+  <div class="mast">
+    <div class="container mast__inner">
+      <a class="brand" href="index.html" aria-label="TornBC TV Home">
+        <div class="brand__mark">TB</div>
+        <div class="brand__text">
+          <div class="brand__name">TornBC TV</div>
+          <div class="brand__tag">News • Weather • Markets • DIY • Originals</div>
+        </div>
+      </a>
+
+      <form class="search" onsubmit="return false;" role="search" aria-label="Search TornBC TV">
+        <input id="siteSearch" type="search" placeholder="Search videos & stories…" autocomplete="off" />
+        <button type="button" id="clearSearch" class="search__btn" aria-label="Clear search">✕</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Section nav -->
+  <nav class="nav" aria-label="Primary">
+    <div class="container nav__inner">
+      <button class="nav__menu" id="menuBtn" aria-controls="navDrawer" aria-expanded="false">☰ Sections</button>
+      <div class="nav__links" id="navLinks">
+        <a href="index.html" class="is-active">Top Stories</a>
+        <a href="news.html">Latest Videos</a>
+        <a href="shows.html">Shows</a>
+        <a href="tools.html">Interactive Tools</a>
+        <a href="times.html">Torn City Times</a>
+        <a href="weather.html">Weather Desk</a>
+        <a href="markets.html">Markets</a>
+        <a href="community.html">Community</a>
+        <a href="about.html">About</a>
       </div>
-      <div style="padding: 0 16px 18px;">
-        <div class="grid3">
-          <div class="card tile">
-            <h3>Mission</h3>
-            <p>Make Torn content fun, fast, and easy to browse — without turning the homepage into a wall of embeds.</p>
-            <div class="meta">Clean front page</div>
-          </div>
-          <div class="card tile">
-            <h3>Brand</h3>
-            <p>TRON-inspired neon + grid vibe, with a futuristic typeface and crisp panels.</p>
-            <div class="meta">Orbitron font</div>
-          </div>
-          <div class="card tile">
-            <h3>Credits</h3>
-            <p>YouTube is used for embedding. Torn is owned by its respective creators.</p>
-            <div class="meta">Fan project</div>
+
+      <div class="nav__right">
+        <a class="btn btn--ghost" href="music.html">♫ Music</a>
+        <a class="btn btn--ghost" href="media-kit.html">Media Kit</a>
+        <a class="btn btn--primary" href="https://www.youtube.com/playlist?list=PL_ZeMqAX1P35-Wio5Au7qFgWBsER3VgZC" target="_blank" rel="noopener">▶ Watch</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Drawer (mobile) -->
+  <aside class="drawer" id="navDrawer" aria-hidden="true">
+    <div class="drawer__head">
+      <strong>Sections</strong>
+      <button class="drawer__close" id="closeDrawer" aria-label="Close">✕</button>
+    </div>
+    <div class="drawer__links">
+      <a href="index.html">Top Stories</a>
+      <a href="news.html">Latest Videos</a>
+      <a href="shows.html">Shows</a>
+      <a href="tools.html">Interactive Tools</a>
+      <a href="times.html">Torn City Times</a>
+      <a href="weather.html">Weather Desk</a>
+      <a href="markets.html">Markets</a>
+      <a href="community.html">Community</a>
+      <a href="about.html">About</a>
+    </div>
+    <div class="drawer__foot">
+      <a class="btn btn--primary btn--full" href="https://www.youtube.com/playlist?list=PL_ZeMqAX1P35-Wio5Au7qFgWBsER3VgZC" target="_blank" rel="noopener">▶ Open Playlist</a>
+      <a class="btn btn--ghost btn--full" href="recruitment.html">✉ Become a Creator</a>
+    </div>
+  </aside>
+
+  <main id="top" class="container main">
+    <section class="grid" aria-label="About TornBC TV">
+      <div class="sectionHead">
+        <h2>About TornBC TV</h2>
+        <p class="muted"><a href="index.html">← Back to home</a></p>
+      </div>
+    </section>
+
+    <section id="about" class="grid" aria-label="About TornBC TV">
+      <div class="sectionHead">
+        <h2>About TornBC TV</h2>
+        <p class="muted">A fan-made network built by players, for players.</p>
+      </div>
+
+      <div class="about">
+        <div class="about__card">
+          <h3>What this is</h3>
+          <p>
+            TornBC TV is an independent fan project: news-style coverage, documentaries, and creative shorts set inside Torn City.
+            Everything here is curated manually so you stay in control of what shows on the homepage.
+          </p>
+        </div>
+
+        <div class="about__card">
+          <h3>Contact</h3>
+          <p>
+            Primary contact: <strong>LoneBlackBear</strong> (in-game). Collabs welcome — reporters, editors, artists, and sponsors.
+          </p>
+          <div class="about__actions">
+            <a class="btn btn--ghost" href="recruitment.html">Join the team</a>
+            <a class="btn btn--ghost" href="media-kit.html">Sponsor info</a>
           </div>
         </div>
       </div>
     </section>
-  </div>
-</main>
-
+  </main>
 
   <footer class="footer">
-    <div class="wrap">
-      <div style="display:flex; gap:10px; flex-wrap:wrap; align-items:center;">
-        <span class="badge">TRON Mode</span>
-        <span>© TornBC TV — fan-made Torn community media.</span>
+    <div class="container footer__inner">
+      <div class="footer__left">
+        <div class="footer__brand">TornBC TV</div>
+        <div class="muted small">© <span id="year"></span> • Independent fan project for Torn City</div>
       </div>
-      <div style="margin-top:10px;">Tip: If autoplay ads don’t start, your browser blocked autoplay — they’ll still play when clicked.</div>
+      <div class="footer__right">
+        <a href="index.html">Back to top</a>
+      </div>
     </div>
   </footer>
 
-  <script src="assets/script.js"></script>
+  <script src="js/main.js"></script>
 </body>
 </html>
