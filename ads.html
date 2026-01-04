@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>TornBC TV — News</title>
+  <title>TornBC TV — Advertise</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;800&display=swap" rel="stylesheet">
@@ -83,50 +83,50 @@
   
 <main class="hero">
   <div class="wrap">
-    <section class="card">
-      <div class="cardHead">
-        <div class="kicker">Top stories</div>
-        <h2 class="hTitle">News hub</h2>
-        <p class="p">This page is where the “busy” stuff belongs. The homepage stays clean.</p>
-      </div>
-      <div style="padding: 0 16px 16px;">
-        <div class="grid3">
-          <div class="card tile">
-            <h3>Daily bulletin</h3>
-            <p>Replace the embed with today’s news clip.</p>
-            <div class="meta">Embed slot</div>
-          </div>
-          <div class="card tile">
-            <h3>Event coverage</h3>
-            <p>Elimination, wars, faction drama — all goes here.</p>
-            <div class="meta">Link it as needed</div>
-          </div>
-          <div class="card tile">
-            <h3>Clips archive</h3>
-            <p>Optional: add YouTube playlist embeds by topic.</p>
-            <div class="meta">Playlists</div>
-          </div>
-        </div>
-      </div>
-    </section>
-  </div>
-</main>
-
-<section class="main">
-  <div class="wrap">
-    <div class="section">
-      <h2>Sponsor rail</h2>
-      <div class="card adBox">
+    <div class="heroGrid">
+      <section class="card">
         <div class="cardHead">
-          <div class="kicker">Sponsor spotlight</div>
-          <h3 class="hTitle" style="font-size:16px; margin-bottom:6px;">Now playing</h3>
+          <div class="kicker">Advertise</div>
+          <h2 class="hTitle">Sponsor TornBC TV</h2>
+          <p class="p">Ad units run in a small muted rail across pages. Perfect for quick promos, services, and faction ads.</p>
         </div>
-        <div class="adFrame" data-ad-slot></div>
-        <div class="smallNote">Muted • Autoplays when allowed • Rotates sponsors</div>
-      </div>
+        <div style="padding: 0 16px 16px;">
+          <div class="grid3">
+            <div class="card tile">
+              <h3>Ad format</h3>
+              <p>Recommended: 10–20s YouTube clip (short), clean title, and one clear call-to-action.</p>
+              <div class="meta">Muted autoplay rail</div>
+            </div>
+            <div class="card tile">
+              <h3>Placement</h3>
+              <p>Homepage: 1 sponsor slot. Other pages: sponsor rail enabled.</p>
+              <div class="meta">Lightweight layout</div>
+            </div>
+            <div class="card tile">
+              <h3>How to add</h3>
+              <p>Edit assets/script.js and add your sponsor video IDs to the ADS list.</p>
+              <div class="meta">One list controls all</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <aside class="sideRail">
+        <section class="card adBox">
+          <div class="cardHead">
+            <div class="kicker">Example sponsor</div>
+            <h3 class="hTitle" style="font-size:16px; margin-bottom:6px;">Current spot</h3>
+          </div>
+          <div class="adFrame">
+            <iframe src="https://www.youtube.com/embed/GbSICPkw2Bo?autoplay=0&mute=0&rel=0&modestbranding=1"
+              title="Sponsor example" allow="encrypted-media; picture-in-picture" allowfullscreen></iframe>
+          </div>
+          <div class="smallNote">This one is not muted/autoplay (example viewing page).</div>
+        </section>
+      </aside>
     </div>
   </div>
-</section>
+</main>
 
 
   <footer class="footer">
