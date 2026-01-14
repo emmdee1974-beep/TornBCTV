@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>TornBC TV • Muggins</title>
+  <meta name="description" content="TornBC TV Muggins — a community mugging target list (name, XID, total networth, attack link)." />
+  <link rel="stylesheet" href="css/styles.css" />
+  <style>
+    .mg-wrap { margin-top: 18px; }
+    .mg-head { display:flex; gap: 12px; align-items:flex-end; justify-content:space-between; flex-wrap:wrap; }
+    .mg-title h1 { margin: 0; }
+    .mg-title .muted { margin-top: 4px; }
+    .mg-controls { display:flex; gap: 10px; align-items:center; flex-wrap:wrap; }
+    .mg-controls input {
+      padding: 10px 12px;
+      border-radius: 12px;
+      border: 1px solid rgba(255,255,255,0.14);
+      background: rgba(0,0,0,0.25);
+      color: inherit;
+      min-width: 220px;
+      outline: none;
+    }
+    .mg-controls input::placeholder { opacity: .8; }
+    .mg-status { margin-top: 10px; display:flex; align-items:center; justify-content:space-between; gap:10px; flex-wrap:wrap; }
+    .mg-tableWrap { margin-top: 12px; overflow:auto; border-radius: 14px; border: 1px solid rgba(255,255,255,0.12); }
+    table.mg { width: 100%; border-collapse: collapse; min-width: 860px; }
+    table.mg th, table.mg td { padding: 12px 12px; border-bottom: 1px solid rgba(255,255,255,0.10); }
+    table.mg th { text-align:left; cursor:pointer; user-select:none; position: sticky; top: 0; background: rgba(18,18,18,0.92); backdrop-filter: blur(6px); }
+    table.mg tr:hover td { background: rgba(255,255,255,0.03); }
+    .mg-name a { color: inherit; text-decoration: none; }
+    .mg-name a:hover { text-decoration: underline; }
+    .mg-xid { opacity: .9; font-variant-numeric: tabular-nums; }
+    .mg-nw { font-weight: 800; font-variant-numeric: tabular-nums; }
+    .mg-nw--neg { color: #ff6b6b; }
+    .mg-seen { opacity: .75; font-variant-numeric: tabular-nums; }
+    .mg-actions { white-space: nowrap; }
+    .mg-btn { padding: 8px 10px; border-radius: 12px; }
+    .note { margin-top: 14px; }
+  </style>
+</head>
+
+<body>
+  <!-- Utility bar -->
+  <header class="utility">
+    <div class="container utility__inner">
+      <div class="utility__left">
+        <span class="pill">TBCTV</span>
+        <span class="muted">Independent Broadcasting from Torn City</span>
+      </div>
+      <div class="utility__right">
+        <a class="utility__link" href="index.html">Home</a>
+        <a class="utility__link" href="tools.html">Tools Hub</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="container main mg-wrap">
+    <div class="mg-head">
+      <div class="mg-title">
+        <h1>Muggins</h1>
+        <p class="muted">Community mugging list — click column headers to sort. Attack links open Torn in a new tab.</p>
+      </div>
+
+      <div class="mg-controls">
+        <input id="mgSearch" type="search" placeholder="Search name or XID…" autocomplete="off" />
+        <input id="mgMin" type="text" placeholder="Min networth (e.g. 50000000)" autocomplete="off" />
+        <button id="mgCopy" class="btn btn--ghost">Copy CSV (filtered)</button>
+      </div>
+    </div>
+
+    <div class="mg-status">
+      <div id="mgStatus" class="muted">Loading…</div>
+      <div id="mgUpdated" class="muted"></div>
+    </div>
+
+    <div class="mg-tableWrap">
+      <table class="mg" aria-label="Muggins table">
+        <thead>
+          <tr>
+            <th data-sort="name">Name</th>
+            <th data-sort="xid">XID</th>
+            <th data-sort="networth">Total networth</th>
+            <th data-sort="lastSeen">Updated</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody id="mgBody"></tbody>
+      </table>
+    </div>
+
+    <div class="note">
+      <strong>About:</strong> This page reads its targets from <code>muggins/latest.json</code>. LoneBlackBear updates that file daily.
+      If a link opens but you can’t attack, make sure you’re logged into Torn in the same browser.
+    </div>
+  </main>
+
+  <script src="js/muggins.js"></script>
+</body>
+</html>
