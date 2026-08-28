@@ -12,7 +12,7 @@
   };
 
   const profiles = {
-    Narrator:      { pitch: 0.94, rate: 0.96, volume: 1.00, voiceSlot: 0 },
+    Narrator:      { pitch: 0.84, rate: 0.84, volume: 1.00, voiceSlot: 0 },
     'Young Man':   { pitch: 1.06, rate: 1.00, volume: 1.00, voiceSlot: 1 },
     Mikhail:       { pitch: 0.72, rate: 0.88, volume: 1.00, voiceSlot: 2 },
     LoneBlackBear: { pitch: 0.68, rate: 0.86, volume: 1.00, voiceSlot: 3 },
@@ -25,9 +25,23 @@
   let voices = [];
   let activePlayer = null;
 
+  function narratorVoiceScore(v) {
+    const name = (v.name || '').toLowerCase();
+    const lang = (v.lang || '').toLowerCase();
+    let score = 0;
+    if (/en-gb|en_uk|en-uk/.test(lang)) score += 60;
+    else if (/^en/.test(lang)) score += 20;
+    if (/daniel|george|ryan|arthur|oliver|edward|male/.test(name)) score += 35;
+    if (/natural|neural|enhanced|premium|online/.test(name)) score += 45;
+    if (/microsoft|google|apple/.test(name)) score += 10;
+    if (/zira|samantha|victoria|karen|female/.test(name)) score -= 20;
+    return score;
+  }
+
   function refreshVoices() {
     voices = synth.getVoices().filter(v => /^en([-_]|$)/i.test(v.lang || ''));
     if (!voices.length) voices = synth.getVoices();
+    voices.sort((a,b) => narratorVoiceScore(b) - narratorVoiceScore(a));
   }
   refreshVoices();
   synth.addEventListener?.('voiceschanged', refreshVoices);
@@ -71,8 +85,8 @@
   function chooseVoice(speaker) {
     if (!voices.length) return null;
     const p = profiles[speaker] || profiles.Narrator;
+    if (speaker === 'Narrator') return voices[0] || null;
     const preferred = {
-      Narrator: /david|daniel|alex|george|mark|guy|james/i,
       Mikhail: /pavel|yuri|dmitri|russian|male/i,
       LoneBlackBear: /david|mark|george|guy|male/i,
       Lexi: /zira|samantha|victoria|karen|female/i,
@@ -221,6 +235,16 @@
     }
   }
 
+  function dramaticPauseFor(text, paragraph, nextParagraph) {
+    const t = (text || '').trim();
+    if (/^THUNDER[.!]?$/i.test(t)) return 900;
+    if (/^Mistake[.!]?$/i.test(t)) return 700;
+    if (/…$/.test(t)) return 550;
+    if (/[!?]["']?$/.test(t)) return 360;
+    if (nextParagraph && nextParagraph !== paragraph) return 520;
+    return 150;
+  }
+
   class ChapterPlayer {
     constructor(section) {
       this.section = section;
@@ -245,7 +269,7 @@
           <button type="button" class="audioPlay">▶ Listen</button>
           <button type="button" class="audioPause" disabled>⏸ Pause</button>
           <button type="button" class="audioStop" disabled>■ Stop</button>
-          <label>Voices <select class="audioMode"><option value="cast">Full Cast</option><option value="narrator">Narrator</option></select></label>
+          <label>Voices <select class="audioMode"><option value="narrator" selected>Cinematic Narrator</option><option value="cast">Full Cast (experimental)</option></select></label>
           <label>Speed <select class="audioSpeed"><option value="0.85">0.85×</option><option value="1" selected>1×</option><option value="1.15">1.15×</option><option value="1.3">1.3×</option></select></label>
           <label class="audioCheck"><input type="checkbox" class="audioAmbience" checked> Atmosphere</label>
         </div>
@@ -336,8 +360,10 @@
       };
       u.onend = () => {
         if (this.state !== 'playing') return;
+        const next = this.segments[this.index + 1];
+        const pause = dramaticPauseFor(seg.text, seg.paragraph, next && next.paragraph);
         this.index += 1;
-        this.speakNext();
+        window.setTimeout(() => { if (this.state === 'playing') this.speakNext(); }, pause);
       };
       u.onerror = (e) => {
         if (e.error === 'canceled' || e.error === 'interrupted') return;
