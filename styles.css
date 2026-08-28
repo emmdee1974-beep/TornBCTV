@@ -64,3 +64,8 @@
 /* v10 Thunder Maker complete story */
 .storyWrap{max-width:1000px}.fullStoryText{max-width:860px;margin:0 auto;color:#d4dae1;font-size:1.03rem;line-height:1.82}.fullStoryText p{margin:0 0 1.22em}.fullStoryText p:first-child::first-letter{float:left;font-size:3.25rem;line-height:.82;font-weight:900;color:var(--red);padding:.1em .09em 0 0}.chapterForumLink{max-width:860px;margin:22px auto 30px;padding-top:12px;border-top:1px solid var(--line)}.storyVideoDivider{max-width:960px;margin:0 auto;padding:34px 0 8px;border-top:1px solid #303844}.storyVideoDivider h3{font-size:1.55rem;margin:.3em 0}.memorialSection{background:radial-gradient(circle at 50% 0,rgba(227,38,54,.08),transparent 48%)}.memorialCard{max-width:900px;margin:auto;text-align:center;padding:34px 28px;border:1px solid var(--line);border-radius:14px;background:linear-gradient(180deg,#15191f,#0d1014)}.memorialCard p{margin:.7em auto 0;max-width:760px;font-size:1.08rem;line-height:1.7;color:#d9dee5}.storyWrap .sectionHead{max-width:860px;margin-left:auto;margin-right:auto}
 @media(max-width:700px){.fullStoryText{font-size:.98rem;line-height:1.72}.storyWrap .sectionHead{align-items:flex-start}.fullStoryText p:first-child::first-letter{font-size:2.7rem}.memorialCard{padding:26px 20px}}
+
+/* v11 Thunder Maker hero polish */
+.coverFrame{max-width:340px;justify-self:end}
+.coverFrame img{width:100%;max-height:none;aspect-ratio:auto;object-fit:contain}
+@media(max-width:800px){.coverFrame{justify-self:start;max-width:280px}}
