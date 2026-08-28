@@ -41,3 +41,12 @@ Upload the contents of this folder to the root of the GitHub repository connecte
 - Embedded all five Elimination propaganda images directly inside `elimination-2025.html` as PNG data.
 - Local copies remain under `assets/elimination/` as archive backups.
 - This prevents missing poster images if the assets directory is skipped during a partial GitHub/Cloudflare update.
+
+
+## 2026 revamp v9
+- Rebuilt The Thunder Maker as a four-part story/video feature.
+- Added preserved forum screenshot and cover art.
+- Added direct original forum link.
+- Expanded Tools into the Digital Longhouse script shelf.
+- Refreshed Watch, Archive and About pages.
+- Scanned local site links and asset references before packaging.
