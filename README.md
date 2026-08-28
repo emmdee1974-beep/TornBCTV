@@ -16,3 +16,9 @@ The old HTML pages are copied into `/legacy/` so content is not lost while keepi
 
 ## Deployment
 Upload the contents of this folder to the root of the GitHub repository connected to Cloudflare Pages. No build step is required.
+
+## 2026 Punchbags archive update
+- Rebuilt `elimination-2025.html` as **The Punchbags Files** retrospective.
+- Added five cleaned surviving campaign images under `assets/elimination/`.
+- Added `elimination-submission.html` and `newspaper-submission.txt` for the Torn newspaper call.
+- The YouTube playlist remains the video master archive; episode card chapter names are editorial archive labels, not claimed YouTube titles.
