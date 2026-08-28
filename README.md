@@ -22,3 +22,17 @@ Upload the contents of this folder to the root of the GitHub repository connecte
 - Added five cleaned surviving campaign images under `assets/elimination/`.
 - Added `elimination-submission.html` and `newspaper-submission.txt` for the Torn newspaper call.
 - The YouTube playlist remains the video master archive; episode card chapter names are editorial archive labels, not claimed YouTube titles.
+
+
+## 2026 Revamp v3
+- Restored the five known Malice/Pinguux propaganda archive links from Torn.
+- The Elimination gallery now loads the full archived Torn originals when online.
+- Local copies remain bundled as automatic fallbacks if a Torn image link ever stops working.
+- Restored the full propaganda wall to the Punchbags Files gallery.
+
+
+## v4 archive update
+- Re-edited The Punchbags Files into a five-chapter story.
+- Integrated surviving Malice/Pinguux campaign posters into the chronology.
+- Re-grouped all surviving Elimination Shorts as campaign, propaganda, breaking news, field reports and epilogue.
+- Preserved the YouTube master playlist and Torn-hosted image archive links.
