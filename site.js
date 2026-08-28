@@ -1,0 +1,3 @@
+const YT=(id)=>`https://www.youtube.com/watch?v=${id}`;
+const THUMB=(id)=>`https://i.ytimg.com/vi/${id}/hqdefault.jpg`;
+function videoCards(target, items){const el=document.querySelector(target);if(!el)return;el.innerHTML=items.map((v,i)=>`<article class="card"><a href="${YT(v.id)}" target="_blank" rel="noopener"><img class="thumb" src="${THUMB(v.id)}" alt="${v.title} thumbnail" loading="lazy"></a><div class="cardBody"><span class="tag">${v.tag||'TornBC TV'}</span><h3>${v.title}</h3>${v.desc?`<p>${v.desc}</p>`:''}<a class="btn secondary" href="${YT(v.id)}" target="_blank" rel="noopener">Watch on YouTube</a></div></article>`).join('')}
