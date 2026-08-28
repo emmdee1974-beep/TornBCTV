@@ -36,3 +36,8 @@ Upload the contents of this folder to the root of the GitHub repository connecte
 - Integrated surviving Malice/Pinguux campaign posters into the chronology.
 - Re-grouped all surviving Elimination Shorts as campaign, propaganda, breaking news, field reports and epilogue.
 - Preserved the YouTube master playlist and Torn-hosted image archive links.
+
+## v5 image reliability fix
+- Embedded all five Elimination propaganda images directly inside `elimination-2025.html` as PNG data.
+- Local copies remain under `assets/elimination/` as archive backups.
+- This prevents missing poster images if the assets directory is skipped during a partial GitHub/Cloudflare update.
