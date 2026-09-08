@@ -50,3 +50,6 @@ Upload the contents of this folder to the root of the GitHub repository connecte
 - Expanded Tools into the Digital Longhouse script shelf.
 - Refreshed Watch, Archive and About pages.
 - Scanned local site links and asset references before packaging.
+
+## Elimination Betting
+The site now includes an Elimination-only pari-mutuel betting desk. Bettors authenticate with a Torn Limited/custom API key restricted to `user -> basic`; the key is not stored. Bets are tied to the authenticated Torn player ID. See `BETTING-SETUP.md` for Cloudflare D1/Pages Functions deployment.
